@@ -34,20 +34,21 @@ jobs:
                 run: |
                     python -m pip install --upgrade pip
                     pip install -r requirements.txt
-                working-directory: ${{ GITHUB_WORKSPACE }}/covid19-in
+                working-directory: ${{ github.workspace }}/covid19-in
 
             -   name: Debug Paths
                 run: ls -R
 
             -   name: Run script
                 run: python main.py
-                working-directory: ${{ GITHUB_WORKSPACE }}/covid19-in
+                working-directory: ${{ github.workspace }}/covid19-in
 
             -   name: Log
                 run: |
                     echo "${{ github.actor }}@users.noreply.github.com" >> log.txt
                     REMOTE=https://${{ secrets.PAGES_TOKEN }}@github.com/${{ github.repository }}
                     echo $REMOTE >> log.txt
+                    echo ${{ github.sha }} >> log.txt
 
             -   name: Commit & Push
                 run: |
