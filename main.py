@@ -26,8 +26,8 @@ in_recoveries = recoveries[recoveries['Country/Region'] == 'India']
 in_deaths = deaths[deaths['Country/Region'] == 'India']
 
 in_cases_df = in_cases[in_cases.columns[4:]]
-in_recoveries_df = in_recoveries_df[in_recoveries_df.columns[4:]]
-in_deaths_df = in_deaths_df[in_deaths_df.columns[4:]]
+in_recoveries_df = in_recoveries[in_recoveries.columns[4:]]
+in_deaths_df = in_deaths[in_deaths.columns[4:]]
 
 #india = covid_data[covid_data['Country/Region'] == 'India']
 #india_df = india[india.columns[4:]]
