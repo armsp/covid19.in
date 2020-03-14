@@ -45,6 +45,7 @@ jobs:
 
             -   name: Log
                 run: |
+                    pwd
                     echo "${{ github.actor }}@users.noreply.github.com" >> log.txt
                     REMOTE=https://${{ secrets.PAGES_TOKEN }}@github.com/${{ github.repository }}
                     echo $REMOTE >> log.txt
@@ -52,6 +53,7 @@ jobs:
 
             -   name: Commit & Push
                 run: |
+                    pwd
                     git config user.email "${{ github.actor }}@users.noreply.github.com"
                     git config user.name "${{ github.actor }}"
                     git commit -am "Automated report update"
