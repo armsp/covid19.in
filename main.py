@@ -8,7 +8,7 @@ from datetime import datetime
 
 sns.set(style="ticks")#darkgrid, whitegrid,dark,white,ticks
 #sns.set(font_scale = 0.5)
-sns.set_context("paper", rc={"font.size":8,"axes.titlesize":4,"axes.labelsize":5})#paper,talk,notebook
+sns.set_context("paper", rc={"font.size":8,"axes.titlesize":20,"axes.labelsize":15})#paper,talk,notebook
 fig, ax = plt.subplots()
 
 covid_data_path = os.path.join(os.environ['GITHUB_WORKSPACE'], 'covid-data', 'csse_covid_19_data', 'csse_covid_19_time_series')
@@ -36,10 +36,10 @@ sns.barplot(data=in_cases_df, palette=sns.color_palette("Oranges", len(in_cases_
 sns.barplot(data=in_recoveries_df, palette=sns.color_palette("Greens", len(in_recoveries_df.columns)), ax=ax)
 sns.barplot(data=in_deaths_df, palette=sns.color_palette("Reds", len(in_deaths_df.columns)), ax=ax)
 
-plt.title('TITLE')
+plt.title('COVID-19 Cases, Deaths and Recovery Graph')
 ax.set(xlabel='Time ->', ylabel='Cases')
 plt.xticks(fontsize=6, rotation=75)
-plt.yticks(fontsize=10)
+plt.yticks(fontsize=6)
 plt.gca().set_position([0, 0, 1, 1])
 plt.savefig("graph.svg", format='svg', dpi=1200, bbox_inches='tight')
 plt.show()#must be in the end otherwise saving to svg won't work
