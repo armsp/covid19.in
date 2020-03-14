@@ -1,0 +1,53 @@
+name: COVID-19 tracking India
+
+on:
+    push:
+        branches:
+            -   master
+    schedule:
+        -   cron: '0 * * * *' #hourly
+
+jobs:
+    my-job:
+        name: My job
+        runs-on: ubuntu-latest
+        #env:
+            #TOKEN_GITHUB_API: ${{ secrets.TOKEN_GITHUB_API }}
+
+        steps:
+            -   name: Checkout Own Repo
+                uses: actions/checkout@v2
+                with:
+                    path: covid19-in
+            -   name: Checkout JHU COVID Repo
+                uses: actions/checkout@v2
+                with:
+                    repository:  CSSEGISandData/COVID-19
+                    path: covid-data
+
+            -   name: Setup Python
+                uses: actions/setup-python@v1
+                with:
+                    python-version: '3.7'
+                    architecture: 'x64'
+
+            -   name: Debug Paths
+                run: ls -R
+
+            -   name: Run script
+                run: python main.py
+
+            -   name: Log
+                run: |
+                    echo "${{ github.actor }}@users.noreply.github.com" >> log.txt
+                    REMOTE=https://${{ secrets.PAGES_TOKEN }}@github.com/${{ github.repository }}
+                    echo $REMOTE >> log.txt
+
+            -   name: Commit & Push
+                run: |
+                    git config user.email "${{ github.actor }}@users.noreply.github.com"
+                    git config user.name "${{ github.actor }}"
+                    git commit -am "Automated report update"
+                    git push
+
+
