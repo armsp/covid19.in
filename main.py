@@ -110,7 +110,7 @@ recoveries_T = in_recoveries_df.T
 temp_df = cases_T.join([deaths_T, recoveries_T])
 
 final_df = pd.melt(temp_df.reset_index(), id_vars='index', var_name='category', value_name='value')
-table_df.to_csv(f'./datasets/timeseries_records/categories_timeseries.csv', sep=',', encoding='utf-8', index=False)
+final_df.to_csv(f'./datasets/timeseries_records/categories_timeseries.csv', sep=',', encoding='utf-8', index=False)
 
 
 #p = {"cases": sns.color_palette("Oranges", 51), "deaths" : sns.color_palette("Reds", 51), "rec": #sns.color_palette("Greens", 51)}
