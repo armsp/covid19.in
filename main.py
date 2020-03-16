@@ -67,7 +67,7 @@ req = request.Request(url, headers=header)#, data=params)
 response = request.urlopen(req)
 
 table_list = pd.read_html(response, header=0)
-table_df = table_list[0]
+table_df = table_list[0].head(-1)
 
 def geocode(city):
     url = 'https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates'
