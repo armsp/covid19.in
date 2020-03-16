@@ -42,6 +42,7 @@ plt.title('COVID-19 Cases, Deaths and Recovery Graph')
 ax.set(xlabel='Time ->', ylabel='Cases')
 plt.xticks(fontsize=6, rotation=75)
 plt.yticks(fontsize=6)
+ax.axhline(int(in_cases_df.iloc[:, -1]), ls='--')
 plt.gca().set_position([0, 0, 1, 1])
 plt.savefig("graph.svg", format='svg', dpi=1200, bbox_inches='tight')
 plt.show()#must be in the end otherwise saving to svg won't work
