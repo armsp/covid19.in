@@ -2,7 +2,9 @@
 
 ## timeseries_records :file_folder:
 - Contains time series data extracted from [JHU-CSSE COVID-19 Repository](https://github.com/CSSEGISandData/COVID-19)
-- A new column is added whenever the JHU data updates.
+- The data is transformed such that it is easy to plot them as categorical plots simultaneously using pandas, seaborn or matplotlib.
+- Columns in the dataset - `index`,	`category`, `value` where `index` is the *timestamp*, `category` is *cases*, *deaths*, *recoveries* and `value` is the corresponding value of the category at the given timestamp.
+- New rows are added whenever the JHU data updates.
 
 ## statewise_files :file_folder:
 - Contians the statewise statistics in a convinient csv format extracted from Ministry of Health & Family Welfare - [MOHFW](https://www.mohfw.gov.in/)
