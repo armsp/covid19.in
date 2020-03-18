@@ -58,7 +58,7 @@ with open('index.html', 'w+') as f:
   f.write(formatted_html)
 
 Path(os.path.join(os.environ['GITHUB_WORKSPACE'], 'covid19-in', 'datasets', 'timeseries_records')).mkdir(parents=True, exist_ok=True)
-Path(os.path.join(os.environ['GITHUB_WORKSPACE'], 'covid19-in', 'datasets', 'statewise_files')).mkdir(parents=True, exist_ok=True)
+Path(os.path.join(os.environ['GITHUB_WORKSPACE'], 'covid19-in', 'datasets', 'statewise_distribution')).mkdir(parents=True, exist_ok=True)
 
 url = 'http://www.mohfw.gov.in/'
 header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36'}
@@ -98,7 +98,7 @@ def add_lat_lon(df):
     return df
 
 table_df = add_lat_lon(table_df)
-table_df.to_csv(f'./datasets/statewise_files/{str(date.today())}.csv', sep=',', encoding='utf-8', index=False)
+table_df.to_csv(f'./datasets/statewise_distribution/{str(date.today())}.csv', sep=',', encoding='utf-8', index=False)
 
 #####################
 in_cases_df.index = pd.Index(['cases'], name='time')
