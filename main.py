@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 
 sns.set(style="ticks")#darkgrid, whitegrid,dark,white,ticks
 #sns.set(font_scale = 0.5)
-sns.set_context("paper", rc={"font.size":8,"axes.titlesize":20,"axes.labelsize":15})#paper,talk,notebook
+sns.set_context("paper", rc={"font.size":8,"axes.titlesize":15,"axes.labelsize":10})#paper,talk,notebook
 fig, ax = plt.subplots()
 
 covid_data_path = os.path.join(os.environ['GITHUB_WORKSPACE'], 'covid-data', 'csse_covid_19_data', 'csse_covid_19_time_series')
@@ -116,7 +116,7 @@ final_df['index'] = final_df['index'].apply(lambda x: datetime.strptime(x, '%m/%
 final_df.to_csv(f'./datasets/timeseries_records/categories_timeseries.csv', sep=',', encoding='utf-8', index=False)
 
 ax2 = plt.axes()
-sns.lineplot(x='index', y='value', hue='category', style='category', palette={'cases': 'Orange', 'recoveries': 'Green', 'deaths': 'Red'}, dashes=False, data=final_df, markers=True, ax=ax2)
+sns.lineplot(x='index', y='value', hue='category', hue_order=['cases', 'recoveries', 'deaths'], style='category', palette={'cases': 'Orange', 'recoveries': 'Green', 'deaths': 'Red'}, dashes=False, data=final_df, markers=True, ax=ax2)
 ax2.axhline(int(final_df['value'].where(final_df['category'] == 'cases').max()), ls='dotted')
 #'-', '--', '-.', ':', 'None', ' ', '', 'solid', 'dashed', 'dashdot', 'dotted'
 plt.title('COVID-19 Cases, Deaths and Recovery Graph')
