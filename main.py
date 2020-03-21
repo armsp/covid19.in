@@ -94,7 +94,7 @@ def geocode(city):
       return (response_dict['candidates'][0]["location"]["x"], response_dict['candidates'][0]["location"]["y"])
 
 def add_lat_lon(df):
-    df['Lat'], df['Lon'] = zip(*df['Name of State / UT'].map(geocode))
+    df['Lon'], df['Lat'] = zip(*df['Name of State / UT'].map(geocode))
     return df
 
 table_df = add_lat_lon(table_df)
