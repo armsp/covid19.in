@@ -116,15 +116,15 @@ final_df['index'] = final_df['index'].apply(lambda x: datetime.strptime(x, '%m/%
 final_df.to_csv(f'./datasets/timeseries_records/categories_timeseries.csv', sep=',', encoding='utf-8', index=False)
 
 ax2 = plt.axes()
-sns.lineplot(x='index', y='value', hue='category', style='category', palette={'cases': 'Orange', 'deaths': 'Red', 'recoveries': 'Green'}, dashes=False, data=final_df, markers=True, ax=ax2)
+sns.lineplot(x='index', y='value', hue='category', style='category', palette={'cases': 'Orange', 'recoveries': 'Green', 'deaths': 'Red'}, dashes=False, data=final_df, markers=True, ax=ax2)
 ax2.axhline(int(final_df['value'].where(final_df['category'] == 'cases').max()), ls='dotted')
 #'-', '--', '-.', ':', 'None', ' ', '', 'solid', 'dashed', 'dashdot', 'dotted'
 plt.title('COVID-19 Cases, Deaths and Recovery Graph')
 ax2.set(xlabel='Time ->', ylabel='Number of cases/ deaths/ recoveries')
-ax2.legend(title='Legend', labels=['Confirmed Cases', 'Deaths', 'Recoveries'])#loc='upper left'
+ax2.legend(title='Legend', labels=['Confirmed Cases', 'Recoveries', 'Deaths'])#loc='upper left'
 ax2.set(xticks=final_df['index'].values)
 ax2.grid(color='#f3f3f3', linestyle=':', linewidth=0.5)##cdcdcd #f3f3f3 #D3D3D3
-plt.xticks(fontsize=8, rotation=75)
-plt.yticks(fontsize=10)
+plt.xticks(fontsize=6, rotation=75)
+plt.yticks(fontsize=6)
 plt.savefig("graph.svg", format='svg', dpi=1200, bbox_inches='tight')
 plt.show()
