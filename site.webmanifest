@@ -1,0 +1,20 @@
+{
+  "short_name": "COVID-19",
+  "name": "COVID-19 dataset and statistics in India",
+  "description": "COVID-19 news and statistics in India. Read how to keep yourself safe, learn about the virus and the disease. Find the latest stats, updates, fads, fake news and live updating graph on cases, recoveries and deaths. ",
+  "icons": [
+    {
+      "src": "android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "theme_color": "#ffffff"
+}
