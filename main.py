@@ -38,11 +38,11 @@ sns.barplot(data=in_cases_df, palette=sns.color_palette("Oranges", len(in_cases_
 sns.barplot(data=in_recoveries_df, palette=sns.color_palette("Greens", len(in_recoveries_df.columns)), ax=ax)
 sns.barplot(data=in_deaths_df, palette=sns.color_palette("Reds", len(in_deaths_df.columns)), ax=ax)
 
-plt.title('COVID-19 Cases, Deaths and Recovery Graph')
-ax.set(xlabel='Time ->', ylabel='Cases')
-plt.xticks(fontsize=6, rotation=75)
-plt.yticks(fontsize=6)
-ax.axhline(int(in_cases_df.iloc[:, -1]), ls='--')
+#plt.title('COVID-19 Cases, Deaths and Recovery Graph')
+#ax.set(xlabel='Time ->', ylabel='Cases')
+#plt.xticks(fontsize=6, rotation=75)
+#plt.yticks(fontsize=6)
+#ax.axhline(int(in_cases_df.iloc[:, -1]), ls='--')
 #plt.gca().set_position([0, 0, 1, 1])
 #plt.savefig("graph.svg", format='svg', dpi=1200, bbox_inches='tight')
 #plt.show()#must be in the end otherwise saving to svg won't work
@@ -68,7 +68,8 @@ req = request.Request(url, headers=header)#, data=params)
 response = request.urlopen(req)
 
 table_list = pd.read_html(response, header=0)
-table_df = table_list[0].head(-1)
+#MOHFW Website changed. We now need the second table
+table_df = table_list[1].head(-1)
 
 def geocode(city):
     url = 'https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates'
@@ -116,7 +117,8 @@ final_df['index'] = final_df['index'].apply(lambda x: datetime.strptime(x, '%m/%
 final_df.to_csv(f'./datasets/timeseries_records/categories_timeseries.csv', sep=',', encoding='utf-8', index=False)
 
 ax2 = plt.axes()
-sns.lineplot(x='index', y='value', hue='category', hue_order=['cases', 'recoveries', 'deaths'], style='category', palette={'cases': 'Orange', 'recoveries': 'Green', 'deaths': 'Red'}, dashes=False, data=final_df, markers=True, ax=ax2)
+kwargs = {'markeredgewidth': 0.25}
+sns.lineplot(x='index', y='value', hue='category', hue_order=['cases', 'recoveries', 'deaths'], style='category', palette={'cases': 'Orange', 'recoveries': 'Green', 'deaths': 'Red'}, dashes=False, data=final_df, markers=True, ax=ax2, **kwargs)
 ax2.axhline(int(final_df['value'].where(final_df['category'] == 'cases').max()), ls='dotted')
 #'-', '--', '-.', ':', 'None', ' ', '', 'solid', 'dashed', 'dashdot', 'dotted'
 plt.title('COVID-19 Cases, Deaths and Recovery Graph')
