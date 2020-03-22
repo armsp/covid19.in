@@ -118,7 +118,7 @@ final_df.to_csv(f'./datasets/timeseries_records/categories_timeseries.csv', sep=
 
 ax2 = plt.axes()
 kwargs = {'markeredgewidth': 0.25}
-sns.lineplot(x='index', y='value', hue='category', hue_order=['cases', 'recoveries', 'deaths'], style='category', palette={'cases': 'Orange', 'recoveries': 'Green', 'deaths': 'Red'}, dashes=False, data=final_df, markers=True, ax=ax2, **kwargs)
+sns.lineplot(x='index', y='value', hue='category', hue_order=['cases', 'recoveries', 'deaths'], style='category', palette={'cases': 'Orange', 'recoveries': 'Green', 'deaths': 'Red'}, dashes=False, data=final_df, markers={'deaths': 'X', 'cases': 'o', 'recoveries': 'd'}, ax=ax2, **kwargs)
 ax2.axhline(int(final_df['value'].where(final_df['category'] == 'cases').max()), ls='dotted')
 #'-', '--', '-.', ':', 'None', ' ', '', 'solid', 'dashed', 'dashdot', 'dotted'
 plt.title('COVID-19 Cases, Deaths and Recovery Graph')
