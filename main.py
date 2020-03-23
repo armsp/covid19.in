@@ -13,7 +13,7 @@ import matplotlib.pyplot as plt
 
 sns.set(style="ticks")#darkgrid, whitegrid,dark,white,ticks
 #sns.set(font_scale = 0.5)
-sns.set_context("paper", rc={"font.size":8,"axes.titlesize":15,"axes.labelsize":10})#paper,talk,notebook
+sns.set_context("paper", rc={"font.size":8,"axes.titlesize":15,"axes.labelsize":10,"lines.linewidth": 4,'lines.markersize':7})#paper,talk,notebook
 fig, ax = plt.subplots()
 
 covid_data_path = os.path.join(os.environ['GITHUB_WORKSPACE'], 'covid-data', 'csse_covid_19_data', 'csse_covid_19_time_series')
@@ -68,8 +68,8 @@ req = request.Request(url, headers=header)#, data=params)
 response = request.urlopen(req)
 
 table_list = pd.read_html(response, header=0)
-#MOHFW Website changed. We now need the second table
-table_df = table_list[1].head(-1)
+#MOHFW Website changed again. Looks like they keep the table in the end
+table_df = table_list[-1].head(-1)
 
 def geocode(city):
     url = 'https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates'
@@ -126,6 +126,8 @@ ax2.set(xlabel='Time ->', ylabel='Number of cases/ deaths/ recoveries')
 ax2.legend(title='Legend', labels=['Confirmed Cases', 'Recoveries', 'Deaths'])#loc='upper left'
 ax2.set(xticks=final_df['index'].values)
 ax2.grid(color='#f3f3f3', linestyle=':', linewidth=0.5)##cdcdcd #f3f3f3 #D3D3D3
+ratio = 0.6
+ax2.set_aspect(1.0/ax.get_data_ratio()*ratio)
 plt.xticks(fontsize=6, rotation=75)
 plt.yticks(fontsize=6)
 plt.savefig("graph.svg", format='svg', dpi=1200, bbox_inches='tight')
