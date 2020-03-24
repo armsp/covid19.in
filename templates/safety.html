@@ -1,0 +1,10 @@
+<div class="news">
+    <h2>SAFETY</h2>
+    <ul>
+        {% for safe in safety %}
+            {% for title, link in safe.items() %}
+                <li><a href="{{ link }}">{{ title }}</a></li>
+            {% endfor %}
+        {% endfor %}
+    </ul>
+</div>

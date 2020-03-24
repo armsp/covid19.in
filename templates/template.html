@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {% include 'head.html' %}
+    {% include 'analytics.html' %}
+</head>
+
+<body>
+    {% include 'github-fork.html' %}
+    <div class="wrapper_container">
+        <div class="container">
+            {% include 'header.html'%}
+            <object class="graph" style="height: 100%; width: 100%" data="graph.svg"></object>
+            {% with stats=statistics %}
+                {% include 'stats.html' %}
+            {% endwith %}
+            {% include 'map.html' %}
+            {% with safety=safety_resources %}
+                {% include 'safety.html' %}
+            {% endwith %}
+            {% include 'share.html' %}
+            {% with about_the_disease=about, fake_news=fakes, miscellaneous=misc %}
+                {% include 'resources.html' %}
+            {% endwith %}
+            {% with commit=commit_info %}
+                {% include 'footer.html' %}
+            {% endwith %}
+        </div>
+    </div>
+</body>
+
+</html>
