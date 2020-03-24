@@ -1,0 +1,34 @@
+<div class="virus">
+    <h2>Virus & the Disease</h2>
+    <ul>
+        {% for about in about_the_disease %}
+            {% for title, link in about.items() %}
+                <li>
+                    <a href="{{ link }}">{{ title }}</a>
+                </li>
+            {% endfor %}
+        {% endfor %}
+</div>
+</ul>
+<div class="safety">
+    <h2>Fads & Fake News</h2>
+    <ul>
+        {% for fake in fake_news %}
+            {% for title, link in fake.items() %}
+                <li>
+                    <a href="{{ link }}">{{ title }}</a>
+                </li>
+            {% endfor %}
+        {% endfor %}
+    </ul>
+</div>
+<div class="misc">
+    <h2>Miscellaneous</h2>
+    <ul>
+        {% for misc in miscellaneous %}
+            {% for title, link in misc.items() %}
+                <li><a href="{{ link }}">{{ title }}</a></li>
+            {% endfor %}
+        {% endfor %}
+    </ul>
+</div>
