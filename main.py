@@ -139,7 +139,9 @@ covid_daily_reports_path = os.path.join(os.environ['GITHUB_WORKSPACE'], 'covid-d
 
 list_of_files = glob.glob(covid_daily_reports_path+"/*.csv") # * means all if need specific format then *.csv
 print(list_of_files)
-latest_file = max(list_of_files, key=lambda x: x.split('/')[-1].split('.')[0].split('-')[1])
+#latest_file = max(list_of_files, key=lambda x: x.split('/')[-1].split('.')[0].split('-')[1])
+sorted_files = sorted(list_of_files, key=lambda d: tuple(map(int, d.split('/')[-1].split('.')[0].split('-'))))
+latest_file = sorted_files[-1]
 print(latest_file)
 ## Getting stats data
 stats = pd.read_csv(latest_file)

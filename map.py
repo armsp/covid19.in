@@ -9,10 +9,11 @@ import folium
 m = folium.Map(location=[23.7041, 79.1025], tiles='CartoDB Positron', zoom_start=4)#, prefer_canvas=True)
 import glob
 list_of_files = glob.glob('./datasets/statewise_distribution/*.csv') # * means all if need specific format then *.csv
-latest_file = max(list_of_files, key=lambda x: x.split('.')[1].split('-')[2])
+#latest_file = max(list_of_files, key=lambda x: x.split('.')[1].split('-')[2])
+latest_file = sorted(list_of_files, key=lambda d: tuple(map(int, d.split('.')[1].split('/')[1].split('-'))))
 print(latest_file)
 #data_file = f'./datasets/statewise_distribution/{str(date.today())}.csv'
-data_file = latest_file
+data_file = latest_file[-1]
 df = pd.read_csv(data_file)
 kwargs = {'stroke': True, 'weight': 1.5, 'opacity': 0.8, 'bubblingMouseEvents': False}
 #https://leafletjs.com/reference-1.3.4.html#path-weight
