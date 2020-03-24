@@ -19,7 +19,7 @@ template_env = Environment(loader=template_loader)
 
 sns.set(style="ticks")#darkgrid, whitegrid,dark,white,ticks
 #sns.set(font_scale = 0.5)
-sns.set_context("paper", rc={"font.size":8,"axes.titlesize":15,"axes.labelsize":10,"lines.linewidth": 3,'lines.markersize':6})#paper,talk,notebook
+sns.set_context("paper", rc={"font.size":8,"axes.titlesize":15,"axes.labelsize":10,"lines.linewidth": 2,'lines.markersize':5})#paper,talk,notebook
 fig, ax = plt.subplots()
 
 covid_data_path = os.path.join(os.environ['GITHUB_WORKSPACE'], 'covid-data', 'csse_covid_19_data', 'csse_covid_19_time_series')
