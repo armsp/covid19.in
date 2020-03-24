@@ -138,7 +138,7 @@ template = template_env.get_template(TEMPLATE)
 covid_daily_reports_path = os.path.join(os.environ['GITHUB_WORKSPACE'], 'covid-data', 'csse_covid_19_data', 'csse_covid_19_daily_reports')
 
 list_of_files = glob.glob(covid_daily_reports_path+"/*.csv") # * means all if need specific format then *.csv
-latest_file = max(list_of_files, key=os.path.getctime)
+latest_file = max(list_of_files, key=lambda x: x.split('.')[1].split('-')[2])
 print(latest_file)
 ## Getting stats data
 stats = pd.read_csv(latest_file)

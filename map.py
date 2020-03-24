@@ -9,7 +9,7 @@ import folium
 m = folium.Map(location=[23.7041, 79.1025], tiles='CartoDB Positron', zoom_start=4)#, prefer_canvas=True)
 import glob
 list_of_files = glob.glob('./datasets/statewise_distribution/*.csv') # * means all if need specific format then *.csv
-latest_file = max(list_of_files, key=os.path.getctime)
+latest_file = max(list_of_files, key=lambda x: x.split('.')[1].split('-')[2])
 print(latest_file)
 #data_file = f'./datasets/statewise_distribution/{str(date.today())}.csv'
 data_file = latest_file
