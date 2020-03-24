@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import os
 from datetime import date
-import webbrowser
+#import webbrowser
 import pandas as pd
 import folium
 
@@ -37,4 +37,4 @@ for lon, lat, ind, forei in zip(list(df['Lon']), list(df['Lat']), list(df['Total
     #    **kwargs
     #).add_to(m)
 m.save('foliummap.html')
-webbrowser.open('foliummap.html')
+#webbrowser.open('foliummap.html')
