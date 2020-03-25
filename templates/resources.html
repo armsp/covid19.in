@@ -15,9 +15,13 @@
     <ul>
         {% for fake in fake_news %}
             {% for title, link in fake.items() %}
-                <li>
-                    <a href="{{ link }}">{{ title }}</a>
-                </li>
+                {% if not link %}
+                    <li>{{ title }}</li>
+                {% else %}
+                    <li>
+                        <a href="{{ link }}">{{ title }}</a>
+                    </li>
+                {% endif %}
             {% endfor %}
         {% endfor %}
     </ul>
