@@ -155,6 +155,7 @@ a{
   -webkit-text-size-adjust: none;
   -moz-text-size-adjust: none;
   -ms-text-size-adjust: none;
+  color: gray;
 }
 .share {
 	display: flex;
