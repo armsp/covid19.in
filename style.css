@@ -15,8 +15,8 @@ a{
     display: grid;
     text-align: center;
     /* width: 100vw; */
-    /*justify-items: center;
-    align-items: center;*/
+    justify-items: center;
+    /* align-items: center; */
     border: 3px solid black;
 }
 
