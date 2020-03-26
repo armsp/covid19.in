@@ -49,6 +49,7 @@ a{
   font-family: "Roboto Mono", monospace;
   font-size: xx-small;
   text-align: center;
+  color: gray;
 }
 
 .news, .virus, .safety, .misc{
