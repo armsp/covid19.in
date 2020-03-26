@@ -179,7 +179,7 @@ with open('resources.yaml') as fs:
 
 stats_dict={'w_cases': w_confirmed, 'w_deaths': w_deaths, 'w_recovered': w_recovered, 'i_cases': in_confirmed, 'i_deaths': in_deaths , 'i_recovered': in_recovered}
 commit_info_dict = {'current_time': datetime.now(), 'commit_sha': os.environ['GITHUB_SHA']}
-namespace = {'statistics': stats_dict, 'safety_resources': resources['SAFETY'], 'about': resources['Virus & the Disease'], 'fakes': resources['Fads & Fake News'], 'misc': resources['Miscellaneous'], 'commit_info': commit_info_dict}
+namespace = {'statistics': stats_dict, 'safety_resources': resources['SAFETY & PREVENTION'], 'about': resources['Virus & the Disease'], 'fakes': resources['Fads, Fake News & Scams'], 'misc': resources['Miscellaneous'], 'commit_info': commit_info_dict}
 
 rendered_html = template.render(**namespace)
 
