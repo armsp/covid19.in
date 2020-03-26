@@ -12,6 +12,8 @@ from urllib import request, parse
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+from matplotlib.dates import date2num
+import matplotlib.transforms as transforms
 from jinja2 import Environment, FileSystemLoader
 
 template_loader = FileSystemLoader('./templates')
@@ -117,7 +119,12 @@ final_df.to_csv(f'./datasets/timeseries_records/cases_deaths_timeseries.csv', se
 ax = plt.axes()
 kwargs = {'markeredgewidth': 0.25}
 sns.lineplot(x='index', y='value', hue='category', hue_order=['cases', 'deaths'], style='category', palette={'cases': 'Orange', 'deaths': 'Red'}, dashes=False, data=final_df, markers={'deaths': 'X', 'cases': 'o'}, ax=ax, **kwargs)
-ax.axhline(int(final_df['value'].where(final_df['category'] == 'cases').max()), ls='dotted')
+
+cases_max = int(final_df['value'].where(final_df['category'] == 'cases').max())
+deaths_max = int(final_df['value'].where(final_df['category'] == 'deaths').max())
+ax.axhline(cases_max, ls='dotted', linewidth=0.5)
+ax.axhline(deaths_max, ls='dotted', linewidth=0.5)
+
 #'-', '--', '-.', ':', 'None', ' ', '', 'solid', 'dashed', 'dashdot', 'dotted'
 plt.title('COVID-19 Cases and Deaths Graph')
 ax.set(xlabel='Time ->', ylabel='Cases / Deaths')
@@ -128,6 +135,16 @@ ratio = 0.5
 ax.set_aspect(1.0/ax.get_data_ratio()*ratio)
 plt.xticks(fontsize=6, rotation=75)
 plt.yticks(fontsize=6)
+
+trans = transforms.blended_transform_factory(ax.get_yticklabels()[0].get_transform(), ax.transData)
+ax.text(0, cases_max, color="orange", s=cases_max, transform=trans, ha="right", va="center")
+ax.text(0, deaths_max, color="red", s=deaths_max, transform=trans, ha="right", va="center")
+xt = ax.get_xticks()
+last_x_tick = date2num(final_df['index'].values[-1])
+xt = np.append(xt, last_x_tick)
+xtl = xt.tolist()
+ax.set_xticks(xt)
+
 plt.savefig("graph.svg", format='svg', dpi=1200, bbox_inches='tight')
 plt.show()
 
