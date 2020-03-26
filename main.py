@@ -10,6 +10,7 @@ from urllib import request, parse
 #import webbrowser
 
 import pandas as pd
+import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 from matplotlib.dates import date2num
@@ -69,7 +70,8 @@ response = request.urlopen(req)
 
 table_list = pd.read_html(response, header=0)
 #MOHFW Website changed again. Looks like they keep the table in the end
-table_df = table_list[-1].head(-1)
+#changed again - added another footer row
+table_df = table_list[-1].head(-2)
 
 def geocode(city):
     url = 'https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates'
