@@ -131,7 +131,7 @@ ax.axhline(deaths_max, ls='dotted', linewidth=0.5)
 plt.title('COVID-19 Cases and Deaths Graph')
 ax.set(xlabel='Time ->', ylabel='Cases / Deaths')
 ax.legend(labels=['Confirmed Cases', 'Deaths'])#loc='upper left'
-ax.set(xticks=final_df['index'].values)
+#ax.set(xticks=final_df['index'].values)
 ax.grid(color='#f3f3f3', linestyle=':', linewidth=0.5)##cdcdcd #f3f3f3 #D3D3D3
 ratio = 0.5
 ax.set_aspect(1.0/ax.get_data_ratio()*ratio)
