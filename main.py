@@ -72,7 +72,8 @@ table_list = pd.read_html(response, header=0)
 #MOHFW Website changed again. Looks like they keep the table in the end
 #changed again - added another footer row
 table_df = table_list[-1].head(-2)
-
+print(table_df.columns)
+print(table_df)
 def geocode(city):
     url = 'https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates'
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36'}
@@ -179,7 +180,8 @@ with open('resources.yaml') as fs:
 
 stats_dict={'w_cases': w_confirmed, 'w_deaths': w_deaths, 'w_recovered': w_recovered, 'i_cases': in_confirmed, 'i_deaths': in_deaths , 'i_recovered': in_recovered}
 commit_info_dict = {'current_time': datetime.now(), 'commit_sha': os.environ['GITHUB_SHA']}
-namespace = {'statistics': stats_dict, 'safety_resources': resources['SAFETY & PREVENTION'], 'about': resources['Virus & the Disease'], 'fakes': resources['Fads, Fake News & Scams'], 'misc': resources['Miscellaneous'], 'commit_info': commit_info_dict}
+state_info = {'link': f"https://github.com/armsp/covid19.in/blob/master/datasets/statewise_distribution/{str(date.today())}.csv"}
+namespace = {'statistics': stats_dict, 'safety_resources': resources['SAFETY & PREVENTION'], 'about': resources['Virus & the Disease'], 'fakes': resources['Fads, Fake News & Scams'], 'misc': resources['Miscellaneous'], 'commit_info': commit_info_dict, 'state_info': state_info}
 
 rendered_html = template.render(**namespace)
 
