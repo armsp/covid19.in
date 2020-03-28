@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en-US">
 <head>
     {% include 'analytics.html' %}
     {% include 'head.html' %}
@@ -10,7 +9,9 @@
     {% include 'github-fork.html' %}
     <div class="wrapper_container">
         <div class="container">
-            {% include 'header.html'%}
+            {% with state_stats=state_info %}
+                {% include 'header.html'%}
+            {% endwith %}
             <object class="graph" style="width: 100%" data="graph.svg"></object>
             {% with stats=statistics %}
                 {% include 'stats.html' %}
