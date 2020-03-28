@@ -6,8 +6,8 @@ from datetime import date
 #import webbrowser
 import pandas as pd
 import folium
-
-m = folium.Map(location=[23.7041, 84.1025], tiles='CartoDB Positron', zoom_start=4)#, prefer_canvas=True)
+from folium import plugins
+m = folium.Map(location=[23.7041, 85.1025], tiles='CartoDB Positron', zoom_start=4)#, prefer_canvas=True)
 
 list_of_files = glob.glob('./datasets/statewise_distribution/*.csv') # * means all if need specific format then *.csv
 #latest_file = max(list_of_files, key=lambda x: x.split('.')[1].split('-')[2])
@@ -29,7 +29,7 @@ for lon, lat, ind, forei in zip(list(df['Lon']), list(df['Lat']), list(df['Total
         fill=True,
         **kwargs
     ).add_to(m)
-
+plugins.ScrollZoomToggler().add_to(m)
     #folium.CircleMarker(
     #    location=[lat, lon],
     #    radius=(ind+forei)/4,
