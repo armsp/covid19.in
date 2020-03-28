@@ -13,7 +13,7 @@ import pandas as pd
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
-from matplotlib.dates import date2num
+from matplotlib.dates import date2num, DateFormatter
 import matplotlib.transforms as transforms
 from jinja2 import Environment, FileSystemLoader
 
@@ -22,7 +22,7 @@ template_env = Environment(loader=template_loader)
 
 sns.set(style="ticks")#darkgrid, whitegrid,dark,white,ticks
 #sns.set(font_scale = 0.5)
-sns.set_context("paper", rc={"font.size":8,"axes.titlesize":12,"axes.labelsize":10,"lines.linewidth": 2,'lines.markersize':4})#paper,talk,notebook
+sns.set_context("paper", rc={"font.size":8,"axes.titlesize":9,"axes.labelsize":10,"lines.linewidth": 2,'lines.markersize':4})#paper,talk,notebook
 fig, ax = plt.subplots()
 
 covid_data_path = os.path.join(os.environ['GITHUB_WORKSPACE'], 'covid-data', 'csse_covid_19_data', 'csse_covid_19_time_series')
@@ -98,7 +98,7 @@ def geocode(city):
       return (response_dict['candidates'][0]["location"]["x"], response_dict['candidates'][0]["location"]["y"])
 
 def add_lat_lon(df):
-    df['Lon'], df['Lat'] = zip(*df['Name of State / UT'].map(geocode))
+    df['Lon'], df['Lat'] = zip(*(df['Name of State / UT'].map(geocode))) #SettingWithCopyWarning
     return df
 
 table_df = add_lat_lon(table_df)
@@ -131,7 +131,10 @@ ax.axhline(deaths_max, ls='dotted', linewidth=0.5)
 #'-', '--', '-.', ':', 'None', ' ', '', 'solid', 'dashed', 'dashdot', 'dotted'
 plt.title('COVID-19 Cases and Deaths Graph')
 ax.set(xlabel='Time ->', ylabel='Cases / Deaths')
+ax.xaxis.label.set_visible(False)
 ax.legend(labels=['Confirmed Cases', 'Deaths'])#loc='upper left'
+myFmt = DateFormatter("%d %b %y")
+ax.xaxis.set_major_formatter(myFmt)
 #ax.set(xticks=final_df['index'].values)
 ax.grid(color='#f3f3f3', linestyle=':', linewidth=0.5)##cdcdcd #f3f3f3 #D3D3D3
 ratio = 0.5
@@ -140,7 +143,7 @@ plt.xticks(fontsize=6, rotation=75)
 plt.yticks(fontsize=6)
 
 trans = transforms.blended_transform_factory(ax.get_yticklabels()[0].get_transform(), ax.transData)
-ax.text(0, cases_max, color="orange", s=cases_max, transform=trans, ha="right", va="center")
+ax.text(0, cases_max, color="red", s=cases_max, transform=trans, ha="right", va="center")
 ax.text(0, deaths_max, color="red", s=deaths_max, transform=trans, ha="right", va="center")
 xt = ax.get_xticks()
 last_x_tick = date2num(final_df['index'].values[-1])
@@ -179,7 +182,7 @@ with open('resources.yaml') as fs:
     resources = yaml.load(fs, yaml.SafeLoader)
 
 stats_dict={'w_cases': w_confirmed, 'w_deaths': w_deaths, 'w_recovered': w_recovered, 'i_cases': in_confirmed, 'i_deaths': in_deaths , 'i_recovered': in_recovered}
-commit_info_dict = {'current_time': datetime.now(), 'commit_sha': os.environ['GITHUB_SHA']}
+commit_info_dict = {'current_time': datetime.now().strftime("%B %d, %Y at %I:%M %p"), 'commit_sha': os.environ['GITHUB_SHA']}
 state_info = {'link': f"https://github.com/armsp/covid19.in/blob/master/datasets/statewise_distribution/{str(date.today())}.csv"}
 namespace = {'statistics': stats_dict, 'safety_resources': resources['SAFETY & PREVENTION'], 'about': resources['Virus & the Disease'], 'fakes': resources['Fads, Fake News & Scams'], 'misc': resources['Miscellaneous'], 'commit_info': commit_info_dict, 'state_info': state_info}
 
