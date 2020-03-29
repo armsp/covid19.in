@@ -7,7 +7,7 @@ from datetime import date
 import pandas as pd
 import folium
 from folium import plugins
-m = folium.Map(location=[20.7041, 79.1025], tiles='CartoDB Positron', zoom_start=4)#, prefer_canvas=True)
+m = folium.Map(location=[21.7041, 79.1025], tiles='CartoDB Positron', zoom_start=4)#, prefer_canvas=True)
 
 list_of_files = glob.glob('./datasets/statewise_distribution/*.csv') # * means all if need specific format then *.csv
 #latest_file = max(list_of_files, key=lambda x: x.split('.')[1].split('-')[2])
