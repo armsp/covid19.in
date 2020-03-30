@@ -7,7 +7,8 @@ from datetime import date
 import pandas as pd
 import folium
 from folium import plugins
-m = folium.Map(location=[21.7041, 79.1025], tiles='CartoDB Positron', zoom_start=4)#, prefer_canvas=True)
+map_kwargs = {"zoomSnap": 0.5}
+m = folium.Map(location=[19.7041, 79.1025], tiles='CartoDB Positron', zoom_start=4, **map_kwargs)#, prefer_canvas=True)
 
 list_of_files = glob.glob('./datasets/statewise_distribution/*.csv') # * means all if need specific format then *.csv
 #latest_file = max(list_of_files, key=lambda x: x.split('.')[1].split('-')[2])
@@ -19,10 +20,10 @@ data_file = sorted_files[-1]
 df = pd.read_csv(data_file)
 kwargs = {'stroke': True, 'weight': 1.5, 'opacity': 0.8, 'bubblingMouseEvents': False}
 #https://leafletjs.com/reference-1.3.4.html#path-weight
-for lon, lat, ind, forei in zip(list(df['Lon']), list(df['Lat']), list(df['Total Confirmed cases (Indian National)']), list(df['Total Confirmed cases ( Foreign National )'])):
+for lon, lat, cases in zip(list(df['Lon']), list(df['Lat']), list(df['Total Confirmed cases *'])):
     #print(lon,lat,ind,forei)
     folium.Circle(
-        radius=(ind+forei)*2000,
+        radius=(cases)*1000,
         location=[lat, lon],
         #popup='',
         color='crimson',
