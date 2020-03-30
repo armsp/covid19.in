@@ -133,6 +133,7 @@ ax.axhline(deaths_max, ls='dotted', linewidth=0.5)
 plt.title('COVID-19 Cases and Deaths Graph')
 ax.set(xlabel='Time ->', ylabel='Cases / Deaths')
 ax.xaxis.label.set_visible(False)
+ax.yaxis.label.set_visible(False)
 ax.legend(labels=['Confirmed Cases', 'Deaths'])#loc='upper left'
 myFmt = DateFormatter("%d %b %y")
 ax.xaxis.set_major_formatter(myFmt)
