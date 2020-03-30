@@ -39,6 +39,34 @@ a{
 .stats {
   font-family: "Roboto Mono", monospace;
 }
+.stats-items{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.stats-items h3, h4{
+  margin-bottom: 0;
+}
+.sfi{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.sfi span{
+  font-weight: bold;
+  margin: 0.25em;
+}
+.sfi > span.death{
+  color: red;
+}
+.sfi > span.case{
+  color: darkorange;
+}
+.sfi > span.recover{
+  color: mediumseagreen;
+}
 .header{
   font-family: "Roboto Mono", monospace;
   font-weight: bold;

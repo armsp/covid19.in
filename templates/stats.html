@@ -1,23 +1,53 @@
 <div class="stats">
     <div class="stats-items">
         <div>
-            <h4>WORLD</h4>
+            <h3>WORLD</h3>
         </div>
         <div class="stats-flex-items">
-            <div><span>Cases - {{ stats.w_cases }}</span></div>
-            <div><span>Deaths - {{ stats.w_deaths }}</span></div>
-            <div><span>Recovered - {{ stats.w_recovered }}</span></div>
+            <div>
+                <div class="sfi">
+                    <span class="case">Cases</span>
+                    <span class="case">{{ stats.w_cases }}</span>
+                </div>
+            </div>
+            <div>
+                <div class="sfi">
+                    <span class="death">Deaths</span>
+                    <span class="death">{{ stats.w_deaths }}</span>
+                </div>
+            </div>
+            <div>
+                <div class="sfi">
+                    <span class="recover">Recovered</span>
+                    <span class="recover">{{ stats.w_recovered }}</span>
+                </div>
+            </div>
         </div>
         <div style="color:gray; font-size: x-small;">Source - JHU Dataset</div>
     </div>
     <div class="stats-items">
         <div>
-            <h4>INDIA</h4>
+            <h3>INDIA</h3>
         </div>
         <div class="stats-flex-items">
-            <div><span>Cases - {{ stats.i_cases }}</span></div>
-            <div><span>Deaths - {{ stats.i_deaths }}</span></div>
-            <div><span>Recovered - {{ stats.i_recovered }}</span></div>
+            <div>
+                <div class="sfi">
+                    <span class="case">Cases</span>
+                    <span class="case">{{ stats.i_cases }}</span>
+                </div>
+            </div>
+            <div>
+                <div class="sfi">
+                    <span class="death">Deaths</span>
+                    <span class="death">{{ stats.i_deaths }}</span>
+                </div>
+            </div>
+            <div>
+                <div class="sfi">
+                    <span class="recover">Recovered</span>
+                    <span class="recover">{{ stats.i_recovered }}</span>
+                </div>
+            </div>
         </div>
         <div style="color:gray; font-size: x-small;">Source - JHU Dataset</div>
     </div>
