@@ -72,7 +72,8 @@ table_list = pd.read_html(response, header=0)
 #MOHFW Website changed again. Looks like they keep the table in the end
 #changed again - added another footer row
 #changed again - 1 footer row
-table_df = table_list[-1].head(-1)
+#changed again - 2 footer - need to automate this process
+table_df = table_list[-1].head(-2)
 print(table_df.columns)
 print(table_df)
 def geocode(city):

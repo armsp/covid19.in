@@ -23,7 +23,7 @@ kwargs = {'stroke': True, 'weight': 1.5, 'opacity': 0.8, 'bubblingMouseEvents': 
 for lon, lat, cases in zip(list(df['Lon']), list(df['Lat']), list(df['Total Confirmed cases *'])):
     #print(lon,lat,ind,forei)
     folium.Circle(
-        radius=(cases)*1500,
+        radius = (int(cases))*1500,
         location=[lat, lon],
         #popup='',
         color='crimson',
