@@ -123,7 +123,7 @@ final_df.to_csv(f'./datasets/timeseries_records/cases_deaths_recoveries_timeseri
 
 ax = plt.axes()
 kwargs = {'markeredgewidth': 0.25}
-sns.lineplot(x='index', y='value', hue='category', hue_order=['cases', 'recoveries', 'deaths'], style='category', palette={'cases': 'Orange', 'recoveries': 'Green', 'deaths': 'Red'}, dashes=False, data=final_df, markers={'deaths': 'X', 'recoveries': '', 'cases': 'o'}, ax=ax, **kwargs)
+sns.lineplot(x='index', y='value', hue='category', hue_order=['cases', 'recoveries', 'deaths'], style='category', palette={'cases': 'Orange', 'recoveries': 'Green', 'deaths': 'Red'}, dashes=False, data=final_df, markers={'deaths': 'X', 'recoveries': 'd', 'cases': 'o'}, ax=ax, **kwargs)
 
 cases_max = int(final_df['value'].where(final_df['category'] == 'cases').max())
 deaths_max = int(final_df['value'].where(final_df['category'] == 'deaths').max())
