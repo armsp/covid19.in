@@ -28,20 +28,19 @@ fig, ax = plt.subplots()
 covid_data_path = os.path.join(os.environ['GITHUB_WORKSPACE'], 'covid-data', 'csse_covid_19_data', 'csse_covid_19_time_series')
 
 cases_path = os.path.join(covid_data_path, 'time_series_covid19_confirmed_global.csv')
-#recoveries_path = os.path.join(covid_data_path, 'time_series_19-covid-Recovered.csv')
-# Recovery data is not accurate, need to find another source
+recoveries_path = os.path.join(covid_data_path, 'time_series_covid19_recovered_global.csv')
 deaths_path = os.path.join(covid_data_path, 'time_series_covid19_deaths_global.csv')
 
 cases = pd.read_csv(cases_path)
-#recoveries = pd.read_csv(recoveries_path)
+recoveries = pd.read_csv(recoveries_path)
 deaths = pd.read_csv(deaths_path)
 
 in_cases = cases[cases['Country/Region'] == 'India']
-#in_recoveries = recoveries[recoveries['Country/Region'] == 'India']
+in_recoveries = recoveries[recoveries['Country/Region'] == 'India']
 in_deaths = deaths[deaths['Country/Region'] == 'India']
 
 in_cases_df = in_cases[in_cases.columns[4:]]
-#in_recoveries_df = in_recoveries[in_recoveries.columns[4:]]
+in_recoveries_df = in_recoveries[in_recoveries.columns[4:]]
 in_deaths_df = in_deaths[in_deaths.columns[4:]]
 
 #sns.barplot(data=in_cases_df, palette=sns.color_palette("Oranges", len(in_cases_df.columns)), ax=ax)
@@ -109,33 +108,36 @@ table_df.to_csv(f'./datasets/statewise_distribution/{str(date.today())}.csv', se
 #####################
 in_cases_df.index = pd.Index(['cases'], name='time')
 in_deaths_df.index = pd.Index(['deaths'], name='time')
-#in_recoveries_df.index = pd.Index(['recoveries'], name='time')
+in_recoveries_df.index = pd.Index(['recoveries'], name='time')
 
 cases_T = in_cases_df.T
 deaths_T = in_deaths_df.T
-#recoveries_T = in_recoveries_df.T
-temp_df = cases_T.join([deaths_T])#, recoveries_T])
+recoveries_T = in_recoveries_df.T
+temp_df = cases_T.join([deaths_T, recoveries_T])
 
 final_df = pd.melt(temp_df.reset_index(), id_vars='index', var_name='category', value_name='value')
 final_df['index'] = final_df['index'].apply(lambda x: datetime.strptime(x, '%m/%d/%y'))
 #changing the name of file on 25-03-2020 since JHU deprecated recoveries data
-final_df.to_csv(f'./datasets/timeseries_records/cases_deaths_timeseries.csv', sep=',', encoding='utf-8', index=False)
+#changing the name of file since recoveries data appeared again
+final_df.to_csv(f'./datasets/timeseries_records/cases_deaths_recoveries_timeseries.csv', sep=',', encoding='utf-8', index=False)
 
 ax = plt.axes()
 kwargs = {'markeredgewidth': 0.25}
-sns.lineplot(x='index', y='value', hue='category', hue_order=['cases', 'deaths'], style='category', palette={'cases': 'Orange', 'deaths': 'Red'}, dashes=False, data=final_df, markers={'deaths': 'X', 'cases': 'o'}, ax=ax, **kwargs)
+sns.lineplot(x='index', y='value', hue='category', hue_order=['cases', 'recoveries', 'deaths'], style='category', palette={'cases': 'Orange', 'recoveries': 'Green', 'deaths': 'Red'}, dashes=False, data=final_df, markers={'deaths': 'X', 'recoveries': '', 'cases': 'o'}, ax=ax, **kwargs)
 
 cases_max = int(final_df['value'].where(final_df['category'] == 'cases').max())
 deaths_max = int(final_df['value'].where(final_df['category'] == 'deaths').max())
+recoveries_max = int(final_df['value'].where(final_df['category'] == 'recoveries').max())
 ax.axhline(cases_max, ls='dotted', linewidth=0.5)
 ax.axhline(deaths_max, ls='dotted', linewidth=0.5)
+ax.axhline(recoveries_max, ls='dotted', linewidth=0.5)
 
 #'-', '--', '-.', ':', 'None', ' ', '', 'solid', 'dashed', 'dashdot', 'dotted'
-plt.title('COVID-19 Cases and Deaths Graph')
+plt.title('COVID-19 Cases, Recoveries & Deaths Graph')
 ax.set(xlabel='Time ->', ylabel='Cases / Deaths')
 ax.xaxis.label.set_visible(False)
 ax.yaxis.label.set_visible(False)
-ax.legend(labels=['Confirmed Cases', 'Deaths'])#loc='upper left'
+ax.legend(labels=['Confirmed Cases', 'Recoveries', 'Deaths'])#loc='upper left'
 myFmt = DateFormatter("%d %b %y")
 ax.xaxis.set_major_formatter(myFmt)
 #ax.set(xticks=final_df['index'].values)
@@ -150,6 +152,7 @@ plt.yticks(fontsize=6)
 #ax.text(0, deaths_max, color="red", s=deaths_max, transform=trans, ha="right", va="center")
 ax.text(0.01, cases_max, cases_max, color="red", transform=ax.get_yaxis_transform(), ha="left", va="bottom")
 ax.text(0.01, deaths_max, deaths_max, color="red", transform=ax.get_yaxis_transform(), ha="left", va="bottom")
+ax.text(0.01, recoveries_max, recoveries_max, color="green", transform=ax.get_yaxis_transform(), ha="left", va="bottom")
 #ax.annotate(cases_max, [ax.get_xticks()[-1], cases_max], va='bottom', ha='right', color='red')
 #ax.annotate(deaths_max, [ax.get_xticks()[-1], deaths_max], va='bottom', ha='left', color='red')
 xt = ax.get_xticks()
