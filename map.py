@@ -20,7 +20,7 @@ data_file = sorted_files[-1]
 df = pd.read_csv(data_file)
 kwargs = {'stroke': True, 'weight': 1.5, 'opacity': 0.8, 'bubblingMouseEvents': False}
 #https://leafletjs.com/reference-1.3.4.html#path-weight
-for lon, lat, cases in zip(list(df['Lon']), list(df['Lat']), list(df['Total Confirmed cases (Including 49 foreign Nationals)'])):
+for lon, lat, cases in zip(list(df['Lon']), list(df['Lat']), list(df.iloc[:,2])):
     #print(lon,lat,ind,forei)
     folium.Circle(
         radius = (int(cases))*1500,
