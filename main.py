@@ -121,6 +121,17 @@ final_df['index'] = final_df['index'].apply(lambda x: datetime.strptime(x, '%m/%
 #changing the name of file since recoveries data appeared again
 final_df.to_csv(f'./datasets/timeseries_records/cases_deaths_recoveries_timeseries.csv', sep=',', encoding='utf-8', index=False)
 
+# live updating JHU data using MoHFW
+#live_cases_deaths_recoveries_timeseries = os.path.join(covid_data_path, 'time_series_covid19_deaths_global.csv')
+#live_df = pd.read_csv(live_cases_deaths_recoveries_timeseries)
+#table_df - for cases cumulative, deaths cumulative, recov cumulativve
+#today = datetime.today() -> format it to 1/22/20 type
+#extract last column of each category, live_cases_deaths_recoveries_timeseries
+#see if date matches today
+#if yes - update it
+#if no, add new column
+#now plot this
+
 ax = plt.axes()
 kwargs = {'markeredgewidth': 0.25}
 sns.lineplot(x='index', y='value', hue='category', hue_order=['cases', 'recoveries', 'deaths'], style='category', palette={'cases': 'Orange', 'recoveries': 'Green', 'deaths': 'Red'}, dashes=False, data=final_df, markers={'deaths': 'X', 'recoveries': 'd', 'cases': 'o'}, ax=ax, **kwargs)
