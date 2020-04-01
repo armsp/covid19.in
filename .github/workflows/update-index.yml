@@ -1,4 +1,4 @@
-name: COVID-19 tracking India
+name: COVID-19 statistics & info, India
 
 on:
     push:
@@ -19,6 +19,7 @@ jobs:
                 uses: actions/checkout@v2
                 with:
                     path: covid19-in
+
             -   name: Checkout JHU COVID Repo
                 uses: actions/checkout@v2
                 with:
@@ -30,14 +31,15 @@ jobs:
                 with:
                     python-version: '3.7'
                     architecture: 'x64'
+
             -   name: Install dependencies
                 run: |
                     python -m pip install --upgrade pip
                     pip install -r requirements.txt
                 working-directory: ${{ github.workspace }}/covid19-in
 
-            -   name: Debug Paths
-                run: ls -R
+            # -   name: Debug Paths
+            #     run: ls -R
 
             -   name: Run map script
                 run: python map.py
@@ -55,6 +57,7 @@ jobs:
                     REMOTE=https://${{ secrets.PAGES_TOKEN }}@github.com/${{ github.repository }}
                     echo $REMOTE >> log.txt
                     echo ${{ github.sha }} >> log.txt
+                    cat log.txt
 
             -   name: Commit & Push
                 run: |
