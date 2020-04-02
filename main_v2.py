@@ -42,7 +42,7 @@ table_df = extract_clean_df(mohfw_data_df)
 table_df = add_lat_lon(table_df)
 print("Table DF")
 print(table_df)
-if table_df:
+if not table_df.empty:
     table_df.to_csv(f'./datasets/statewise_distribution/{str(date.today())}.csv', sep=',', encoding='utf-8', index=False)
 else:
     lg.warning("Failed to write statewise distribution file. Map will use old file even though new data is available")
