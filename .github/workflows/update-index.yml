@@ -40,6 +40,9 @@ jobs:
 
             # -   name: Debug Paths
             #     run: ls -R
+            -   name: Run main v2 script
+                run: python main_v2.py
+                working-directory: ${{ github.workspace }}/covid19-in
 
             -   name: Run main script
                 run: python main.py
