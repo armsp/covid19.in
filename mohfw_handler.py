@@ -9,7 +9,7 @@ import pandas as pd
 log = lg.getLogger(__name__)
 
 def mohfw_data_to_df():
-    url = 'http://www.mohfw.gov.in/index.html'
+    url = 'https://www.mohfw.gov.in/index.html'
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36'}
     req = requests.get(url, headers=header)
     if req.status_code == 200:
@@ -42,7 +42,7 @@ def geocode(city):
     except Exception:
       log.error("Geocode request Failed", exc_info=True)
     else:
-      log.debug("Response code = " + response.getcode())#some other code? handle it here
+      log.debug(f"Response code = {response.getcode()}")#some other code? handle it here
       log.info("Not adding Latitude and Longitude")
       return None
 
@@ -64,7 +64,7 @@ def add_lat_lon(df):
 # Melting data -> should happen in the main file
 
 def get_mohfw_stats(df):
-    cases_sum = df.iloc[:,2].sum()
+    cases_sum = df.iloc[:,2].sum() # <-- handle if df is None
     deaths_sum = df.iloc[:,4].sum()
     recovered_sum = df.iloc[:,3].sum()
     #return (cases_sum, deaths_sum, recovered_sum)
