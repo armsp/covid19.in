@@ -9,7 +9,7 @@ import pandas as pd
 log = lg.getLogger(__name__)
 
 def mohfw_data_to_df():
-    url = 'http://www.mohfw.gov.in/'
+    url = 'http://www.mohfw.gov.in/index.html'
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36'}
     req = requests.get(url, headers=header)
     if req.status_code == 200:
@@ -19,6 +19,11 @@ def mohfw_data_to_df():
     else:
         log.error(f"Could not read MoHFW website. Request status code = {req.status_code}")
         return None
+    #req = request.Request(url, headers=header)#, data=params)
+    #response = request.urlopen(req)
+    #table_list = pd.read_html(response, header=0)
+    #df = table_list[-1]
+    #return df
 
 def extract_clean_df(df):
     clean_df = df.head(-1)
