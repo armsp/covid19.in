@@ -18,7 +18,7 @@ from jinja2 import Environment, FileSystemLoader
 from jhu_handler import melt_data, get_jhu_stats, get_india_stats_from_jhu
 from mohfw_handler import mohfw_data_to_df, add_lat_lon, get_mohfw_stats, extract_clean_df
 
-lg.basicConfig(level=lg.DEBUG, filename='log.txt', filemode='a+', format=("[%(asctime)s] [%(levelname)8s] %(filename)s - %(message)s"), datefmt="%d-%b-%Y %I:%M:%S %p")
+lg.basicConfig(level=lg.DEBUG, format=("[%(asctime)s] [%(levelname)8s] %(filename)s - %(message)s"), datefmt="%d-%b-%Y %I:%M:%S %p")#, filename='log.txt', filemode='a+'
 template_loader = FileSystemLoader('./templates')
 template_env = Environment(loader=template_loader)
 TEMPLATE = "template.html"
@@ -40,7 +40,8 @@ Path(os.path.join(os.environ['GITHUB_WORKSPACE'], 'covid19-in', 'datasets', 'sta
 mohfw_data_df = mohfw_data_to_df()
 table_df = extract_clean_df(mohfw_data_df)
 table_df = add_lat_lon(table_df)
-
+print("Table DF")
+print(table_df)
 if table_df:
     table_df.to_csv(f'./datasets/statewise_distribution/{str(date.today())}.csv', sep=',', encoding='utf-8', index=False)
 else:
