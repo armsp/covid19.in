@@ -11,7 +11,7 @@ log = lg.getLogger(__name__)
 def mohfw_data_to_df():
     url = 'http://www.mohfw.gov.in/'
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36'}
-    req = requests.get(url, header=header)
+    req = requests.get(url, headers=header)
     if req.status_code == 200:
         table_list = pd.read_html(req.content)
         df = table_list[-1]
