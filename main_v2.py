@@ -15,7 +15,6 @@ from matplotlib.dates import date2num, DateFormatter
 import matplotlib.transforms as transforms
 from jinja2 import Environment, FileSystemLoader
 
-from map_utils import add_lat_lon
 from jhu_handler import melt_data, get_jhu_stats, get_india_stats_from_jhu
 from mohfw_handler import mohfw_data_to_df, add_lat_lon, get_mohfw_stats, extract_clean_df
 
