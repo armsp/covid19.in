@@ -135,7 +135,7 @@ xt = np.append(xt, last_x_tick)
 xtl = xt.tolist()
 ax.set_xticks(xt)
 
-plt.savefig("graph.svg", format='svg', dpi=1200, bbox_inches='tight')
+plt.savefig("graph_v2.svg", format='svg', dpi=1200, bbox_inches='tight')
 plt.show()
 
 # Make index.html
