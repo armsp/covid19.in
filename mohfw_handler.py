@@ -43,8 +43,7 @@ def geocode(city):
       log.error("Geocode request Failed", exc_info=True)
     else:
       log.debug(f"Response code = {response.getcode()}")#some other code? handle it here
-      log.info("Not adding Latitude and Longitude")
-      return None
+      log.info("Adding Latitude and Longitude")
 
     if response.getcode() == 200:
       response_dict = json.load(response)
