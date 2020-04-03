@@ -84,7 +84,7 @@ a{
   font-family: 'Roboto', sans-serif;
 }
 .country iframe{
-  border: none;
+  border: none;z-index: 9999;
   flex-grow: 1; margin: 0;
   height: 525px;
   overflow:hidden;
@@ -191,7 +191,7 @@ a{
     /* position: relative; */
 }
 .country iframe{
-  flex-grow: 1; border: none; margin: 0; padding: 0;
+  flex-grow: 1; border: none; margin: 0; padding: 0;z-index: 9999;
   height: 525px;
   overflow:hidden;
   width :100%;
