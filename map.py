@@ -20,14 +20,41 @@ data_file = sorted_files[-1]
 df = pd.read_csv(data_file)
 kwargs = {'stroke': True, 'weight': 1.5, 'opacity': 0.8, 'bubblingMouseEvents': False}
 #https://leafletjs.com/reference-1.3.4.html#path-weight
-for lon, lat, cases in zip(list(df['Lon']), list(df['Lat']), list(df.iloc[:,2])):
-    #print(lon,lat,ind,forei)
+for lon, lat, territory, cases, recovered, deaths in zip(list(df['Lon']), list(df['Lat']), list(df.iloc[:,1]), list(df.iloc[:,2]), list(df.iloc[:,3]), list(df.iloc[:,4])):
+        html=f"""
+<table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">
+    <thead>
+    <tr>
+        <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">{territory}</th>
+    </tr>
+        <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">
+            <td style="color: darkorange; padding: 0px 5px;
+            border: 1px solid #dfe2e5;">Active Cases</td>
+            <td style="padding: 0px 5px; color: red;
+            border: 1px solid #dfe2e5;">Deaths</td>
+            <td style="padding: 0px 5px; color: mediumseagreen;
+            border: 1px solid #dfe2e5;">Recovered</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">
+            <td style="padding: 6px 13px;
+            border: 1px solid #dfe2e5;">{cases}</td>
+            <td style="padding: 6px 13px;
+            border: 1px solid #dfe2e5;">{recovered}</td>
+            <td style="padding: 6px 13px;
+            border: 1px solid #dfe2e5;">{deaths}</td>
+        </tr>
+    </tbody>
+</table>
+"""
     folium.Circle(
-        radius = (int(cases))*1500,
+        radius = (int(cases))*500,
         location=[lat, lon],
         #popup='',
         color='crimson',
         fill=True,
+        popup=folium.Popup(popup_html),
         **kwargs
     ).add_to(m)
 plugins.ScrollZoomToggler().add_to(m)
