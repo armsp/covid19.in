@@ -97,7 +97,11 @@ def geocode(city):
 
     if response.getcode() == 200:
       response_dict = json.load(response)
-      return (response_dict['candidates'][0]["location"]["x"], response_dict['candidates'][0]["location"]["y"])
+      if city == 'Andhra Pradesh':
+        return (response_dict['candidates'][1]["location"]["x"], response_dict['candidates'][0]["location"]["y"])
+      else:
+        return (response_dict['candidates'][0]["location"]["x"], response_dict['candidates'][0]["location"]["y"])
+
 
 def add_lat_lon(df):
     df['Lon'], df['Lat'] = zip(*(df['Name of State / UT'].map(geocode))) #SettingWithCopyWarning
