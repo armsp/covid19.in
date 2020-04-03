@@ -80,7 +80,7 @@ def geocode(city):
     url = 'https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates'
     header = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36'}
 
-    param_dict = {"f": "json", "singleLine": f"{city}, IND", "maxLocations": 1}
+    param_dict = {"f": "json", "singleLine": f"{city}, IND", "maxLocations": 2}
     params = parse.urlencode(param_dict).encode('UTF-8')
     req = request.Request(url, headers=header, data=params)
 
