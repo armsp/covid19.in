@@ -21,7 +21,7 @@ df = pd.read_csv(data_file)
 kwargs = {'stroke': True, 'weight': 1.5, 'opacity': 0.8, 'bubblingMouseEvents': False}
 #https://leafletjs.com/reference-1.3.4.html#path-weight
 for lon, lat, territory, cases, recovered, deaths in zip(list(df['Lon']), list(df['Lat']), list(df.iloc[:,1]), list(df.iloc[:,2]), list(df.iloc[:,3]), list(df.iloc[:,4])):
-        html=f"""
+    popup_html=f"""
 <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">
     <thead>
     <tr>
@@ -48,15 +48,8 @@ for lon, lat, territory, cases, recovered, deaths in zip(list(df['Lon']), list(d
     </tbody>
 </table>
 """
-    folium.Circle(
-        radius = (int(cases))*500,
-        location=[lat, lon],
-        #popup='',
-        color='crimson',
-        fill=True,
-        popup=folium.Popup(popup_html),
-        **kwargs
-    ).add_to(m)
+    folium.Circle(radius = (int(cases))*500,location=[lat, lon],color='crimson',fill=True,popup=folium.Popup(popup_html),**kwargs).add_to(m)
+
 plugins.ScrollZoomToggler().add_to(m)
     #folium.CircleMarker(
     #    location=[lat, lon],
