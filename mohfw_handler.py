@@ -26,7 +26,7 @@ def mohfw_data_to_df():
     #return df
 
 def extract_clean_df(df):
-    clean_df = df.head(-1)
+    clean_df = df.head(-2)
     return clean_df
 
 def geocode(city):

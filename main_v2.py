@@ -111,7 +111,7 @@ plt.title('COVID-19 Cases, Recoveries & Deaths Graph')
 ax.set(xlabel='Time ->', ylabel='Cases / Deaths')
 ax.xaxis.label.set_visible(False)
 ax.yaxis.label.set_visible(False)
-ax.legend(labels=['Confirmed Cases', 'Recoveries', 'Deaths'])#loc='upper left'
+ax.legend(labels=['Confirmed Cases', 'Recoveries', 'Deaths'], frameon=False)#loc='upper left'
 myFmt = DateFormatter("%d %b %y")
 ax.xaxis.set_major_formatter(myFmt)
 #ax.set(xticks=final_df['index'].values)
