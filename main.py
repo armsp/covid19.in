@@ -98,7 +98,7 @@ def geocode(city):
     if response.getcode() == 200:
       response_dict = json.load(response)
       if city == 'Andhra Pradesh':
-        return (response_dict['candidates'][1]["location"]["x"], response_dict['candidates'][0]["location"]["y"])
+        return (response_dict['candidates'][1]["location"]["x"], response_dict['candidates'][1]["location"]["y"])
       else:
         return (response_dict['candidates'][0]["location"]["x"], response_dict['candidates'][0]["location"]["y"])
 
