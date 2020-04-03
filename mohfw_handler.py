@@ -63,8 +63,8 @@ def add_lat_lon(df):
 # Melting data -> should happen in the main file
 
 def get_mohfw_stats(df):
-    cases_sum = df.iloc[:,2].sum() # <-- handle if df is None
-    deaths_sum = df.iloc[:,4].sum()
-    recovered_sum = df.iloc[:,3].sum()
+    cases_sum = pd.to_numeric(df.iloc[:,2]).sum() # <-- handle if df is None
+    deaths_sum = pd.to_numeric(df.iloc[:,4]).sum()
+    recovered_sum = pd.to_numeric(df.iloc[:,3]).sum()
     #return (cases_sum, deaths_sum, recovered_sum)
     return {"in_stats":{'cases': cases_sum, 'deaths': deaths_sum, 'recovered': recovered_sum}}
