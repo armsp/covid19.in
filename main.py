@@ -73,7 +73,8 @@ table_list = pd.read_html(response, header=0)
 #changed again - 1 footer row
 #changed again - 2 footer - need to automate this process
 # again
-table_df = table_list[-1].head(-1)
+table_df = table_list[-1]
+table_df = table_df[pd.to_numeric(table_df['S. No.'], errors='coerce').notna()]
 print(table_df.columns)
 print(table_df)
 def geocode(city):

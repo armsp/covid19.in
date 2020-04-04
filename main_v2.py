@@ -72,7 +72,7 @@ print(mohfw_stats)
 live_cases_latest_date = datetime.strptime(live_cases_latest_date, "%m/%d/%y").date()
 live_recoveries_latest_date = datetime.strptime(live_recoveries_latest_date, "%m/%d/%y").date()
 live_deaths_latest_date = datetime.strptime(live_deaths_latest_date, "%m/%d/%y").date()
-
+print(live_cases_latest_date, live_recoveries_latest_date, live_deaths_latest_date)
 if date_today > live_cases_latest_date:
     if mohfw_stats['in_stats']['cases'] > int(live_cases.iloc[:,-1:].iloc[0]):
         print(mohfw_stats['in_stats']['cases'], int(live_cases.iloc[:,-1:].iloc[0]))
