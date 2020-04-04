@@ -73,7 +73,7 @@ table_list = pd.read_html(response, header=0)
 #changed again - 1 footer row
 #changed again - 2 footer - need to automate this process
 # again
-table_df = table_list[-1].head(-2)
+table_df = table_list[-1].head(-1)
 print(table_df.columns)
 print(table_df)
 def geocode(city):

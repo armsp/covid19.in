@@ -30,7 +30,7 @@ def mohfw_data_to_df():
 
 
 def extract_clean_df(df):
-    clean_df = df.head(-2)
+    clean_df = df.head(-1)
     return clean_df
 
 
