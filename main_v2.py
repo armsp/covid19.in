@@ -141,6 +141,7 @@ last_x_tick = date2num(plot_df['index'].values[-1])
 xt = np.append(xt, last_x_tick)
 xtl = xt.tolist()
 ax.set_xticks(xt)
+ax.axvline(last_x_tick, ls='dotted', linewidth=0.5)
 
 plt.savefig("graph_v2.svg", format='svg', dpi=1200, bbox_inches='tight')
 plt.show()
