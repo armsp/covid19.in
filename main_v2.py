@@ -58,13 +58,16 @@ live_cases = in_cases_df
 live_recoveries = in_recoveries_df
 live_deaths = in_deaths_df
 date_today_str = date.today().strftime("%-m/%-d/%y")
+print(f"Today's date is = {date_today_str}")
 date_today = date.today()
+print(date_today)
 #check date in index
 live_cases_latest_date = live_cases.columns[-1]
 live_recoveries_latest_date = live_recoveries.columns[-1]
 live_deaths_latest_date = live_deaths.columns[-1]
 #get today's stats from mohfw
 mohfw_stats = get_mohfw_stats(table_df)
+print(mohfw_stats)
 #compare dates
 live_cases_latest_date = datetime.strptime(live_cases_latest_date, "%m/%d/%y").date()
 live_recoveries_latest_date = datetime.strptime(live_recoveries_latest_date, "%m/%d/%y").date()
@@ -72,12 +75,14 @@ live_deaths_latest_date = datetime.strptime(live_deaths_latest_date, "%m/%d/%y")
 
 if date_today > live_cases_latest_date:
     if mohfw_stats['in_stats']['cases'] > int(live_cases.iloc[:,-1:].iloc[0]):
+        print(mohfw_stats['in_stats']['cases'], int(live_cases.iloc[:,-1:].iloc[0]))
         live_cases[date_today_str] = mohfw_stats['in_stats']['cases']# new column in live with mohfw value
 elif date_today == live_cases_latest_date:
     if mohfw_stats['in_stats']['cases'] > int(live_cases.iloc[:,-1:].iloc[0]):
         live_cases.iloc[:,-1:].iloc[0] = mohfw_stats['in_stats']['cases']
 
 if date_today > live_recoveries_latest_date:
+    print(mohfw_stats['in_stats']['recovered'], int(live_recoveries.iloc[:,-1:].iloc[0]))
     if mohfw_stats['in_stats']['recovered'] > int(live_recoveries.iloc[:,-1:].iloc[0]):
         live_recoveries[date_today_str] = mohfw_stats['in_stats']['recovered']
 elif date_today == live_recoveries_latest_date:
@@ -90,7 +95,9 @@ if date_today > live_deaths_latest_date:
 elif date_today == live_deaths_latest_date:
     if mohfw_stats['in_stats']['deaths'] > int(live_deaths.iloc[:,-1:].iloc[0]):
         live_deaths.iloc[:,-1:].iloc[0] = mohfw_stats['in_stats']['deaths']
-
+print(live_cases)
+print(live_deaths)
+print(live_recoveries)
 plot_df = melt_data(live_cases, live_deaths, live_recoveries)
 plot_df.to_csv(f'./datasets/timeseries_records/live_cases_deaths_recoveries_timeseries.csv', sep=',', encoding='utf-8', index=False)
 
@@ -130,7 +137,7 @@ ax.text(0.01, recoveries_max, recoveries_max, color="green", transform=ax.get_ya
 #ax.annotate(cases_max, [ax.get_xticks()[-1], cases_max], va='bottom', ha='right', color='red')
 #ax.annotate(deaths_max, [ax.get_xticks()[-1], deaths_max], va='bottom', ha='left', color='red')
 xt = ax.get_xticks()
-last_x_tick = date2num(final_df['index'].values[-1])
+last_x_tick = date2num(plot_df['index'].values[-1])
 xt = np.append(xt, last_x_tick)
 xtl = xt.tolist()
 ax.set_xticks(xt)
