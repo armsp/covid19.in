@@ -99,7 +99,7 @@ print(live_cases)
 print(live_deaths)
 print(live_recoveries)
 plot_df = melt_data(live_cases, live_deaths, live_recoveries)
-plot_df['index'] = plot_df['index'].apply(lambda x: datetime.strptime(x, '%m/%d/%y'))
+#plot_df['index'] = plot_df['index'].apply(lambda x: datetime.strptime(x, '%m/%d/%y'))
 plot_df.to_csv(f'./datasets/timeseries_records/live_cases_deaths_recoveries_timeseries.csv', sep=',', encoding='utf-8', index=False)
 
 jhu_df = melt_data(in_cases_df, in_deaths_df, in_recoveries_df)
