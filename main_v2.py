@@ -99,7 +99,12 @@ print(live_cases)
 print(live_deaths)
 print(live_recoveries)
 plot_df = melt_data(live_cases, live_deaths, live_recoveries)
+plot_df['index'] = plot_df['index'].apply(lambda x: datetime.strptime(x, '%m/%d/%y'))
 plot_df.to_csv(f'./datasets/timeseries_records/live_cases_deaths_recoveries_timeseries.csv', sep=',', encoding='utf-8', index=False)
+
+jhu_df = melt_data(in_cases_df, in_deaths_df, in_recoveries_df)
+jhu_df['index'] = jhu_df['index'].apply(lambda x: datetime.strptime(x, '%m/%d/%y'))
+jhu_df.to_csv(f'./datasets/timeseries_records/cases_deaths_recoveries_timeseries.csv', sep=',', encoding='utf-8', index=False)
 
 # Make plot
 ax = plt.axes()
@@ -143,7 +148,7 @@ xtl = xt.tolist()
 ax.set_xticks(xt)
 ax.axvline(last_x_tick, ls='dotted', linewidth=0.5)
 
-plt.savefig("graph_v2.svg", format='svg', dpi=1200, bbox_inches='tight')
+plt.savefig("graph.svg", format='svg', dpi=1200, bbox_inches='tight')
 plt.show()
 
 # Make index.html
@@ -184,5 +189,5 @@ state_info = {'link': f"https://github.com/armsp/covid19.in/blob/master/datasets
 
 namespace = {'statistics': stats_dict, 'safety_resources': resources['SAFETY & PREVENTION'], 'about': resources['Virus & the Disease'], 'fakes': resources['Fads, Fake News & Scams'], 'misc': resources['Miscellaneous'], 'commit_info': commit_info_dict, 'state_info': state_info}
 rendered_html = template.render(**namespace)
-with open("index_v2.html", "w+") as f:
+with open("index.html", "w+") as f:
     f.write(rendered_html)
