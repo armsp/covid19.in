@@ -5,7 +5,7 @@ on:
         branches:
             -   master
     schedule:
-        -   cron: '0 0,7,13,22 * * *' #four times daily
+        -   cron: '0 1,4,8,15 * * *' #four times daily
 
 jobs:
     my-job:
