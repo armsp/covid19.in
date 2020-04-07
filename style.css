@@ -25,6 +25,7 @@ a{
   font-size: larger;
   font-weight: bolder;
   /*text-align: center;*/
+  padding: 1em;
 }
 
 .link-button_item:hover {
