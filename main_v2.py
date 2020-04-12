@@ -25,7 +25,7 @@ TEMPLATE = "template.html"
 template = template_env.get_template(TEMPLATE)
 
 sns.set(style="ticks")
-sns.set_context("paper", rc={"font.size":8,"axes.titlesize":9,"axes.labelsize":10,"lines.linewidth": 2,'lines.markersize':4})#paper,talk,notebook
+sns.set_context("paper", rc={"font.size":8,"axes.titlesize":9,"axes.labelsize":10,"lines.linewidth": 1.5,'lines.markersize':3})#paper,talk,notebook
 fig, ax = plt.subplots()
 
 covid_data_path = os.path.join(os.environ['GITHUB_WORKSPACE'], 'covid-data', 'csse_covid_19_data', 'csse_covid_19_time_series')
@@ -40,8 +40,8 @@ Path(os.path.join(os.environ['GITHUB_WORKSPACE'], 'covid19-in', 'datasets', 'sta
 mohfw_data_df = mohfw_data_to_df()
 table_df = extract_clean_df(mohfw_data_df)
 table_df = add_lat_lon(table_df)
-print("Table DF")
-print(table_df)
+#print("Table DF")
+#print(table_df)
 if not table_df.empty:
     table_df.to_csv(f'./datasets/statewise_distribution/{str(date.today())}.csv', sep=',', encoding='utf-8', index=False)
 else:
