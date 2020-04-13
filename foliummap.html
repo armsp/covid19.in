@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_ff9e3cd8e1d347d190a3b3070cf51716 {
+                #map_74d37aa2f20d4dbdbd95e250985bead0 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -34,7 +34,7 @@
         
     
             <style>
-                #scroll_zoom_toggler_d4bf91c214684697bccd13033eefc0f7 {
+                #scroll_zoom_toggler_2abcdb45267d49c18105b1725417c91d {
                     position:absolute;
                     width:35px;
                     bottom:10px;
@@ -50,21 +50,21 @@
 </head>
 <body>    
     
-            <div class="folium-map" id="map_ff9e3cd8e1d347d190a3b3070cf51716" ></div>
+            <div class="folium-map" id="map_74d37aa2f20d4dbdbd95e250985bead0" ></div>
         
     
-            <img id="scroll_zoom_toggler_d4bf91c214684697bccd13033eefc0f7"
+            <img id="scroll_zoom_toggler_2abcdb45267d49c18105b1725417c91d"
                  alt="scroll"
                  src="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/png/512/arrow-move.png"
                  style="z-index: 999999"
-                 onclick="map_ff9e3cd8e1d347d190a3b3070cf51716.toggleScroll()">
+                 onclick="map_74d37aa2f20d4dbdbd95e250985bead0.toggleScroll()">
             </img>
         
 </body>
 <script>    
     
-            var map_ff9e3cd8e1d347d190a3b3070cf51716 = L.map(
-                "map_ff9e3cd8e1d347d190a3b3070cf51716",
+            var map_74d37aa2f20d4dbdbd95e250985bead0 = L.map(
+                "map_74d37aa2f20d4dbdbd95e250985bead0",
                 {
                     center: [22.7041, 79.1025],
                     crs: L.CRS.EPSG3857,
@@ -79,604 +79,623 @@
 
         
     
-            var tile_layer_78c34e6964334626bed309d8038bbd47 = L.tileLayer(
+            var tile_layer_c06ea568d20a426581ef22676486f860 = L.tileLayer(
                 "https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png",
                 {"attribution": "\u0026copy; \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"http://cartodb.com/attributions\"\u003eCartoDB\u003c/a\u003e, CartoDB \u003ca href =\"http://cartodb.com/attributions\"\u003eattributions\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-            var circle_53c906b51c5a499d94654ab44fdead63 = L.circle(
+            var circle_c230d90551264bf8b980aac6ea2f0e97 = L.circle(
                 [15.754585607000024, 79.95790576800005],
-                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 42700, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 43200, "stroke": true, "weight": 1.5}
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_3e7469b5eff347bcb3ca22bb1c06cf95 = L.popup({"maxWidth": "100%"});
+        var popup_1f97a57dda774fcca7b9e51625540bcb = L.popup({"maxWidth": "100%"});
 
         
-            var html_5f97670fdee24ebd94b1f7dae023666b = $(`<div id="html_5f97670fdee24ebd94b1f7dae023666b" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Andhra Pradesh</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">427</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">11</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">7</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_3e7469b5eff347bcb3ca22bb1c06cf95.setContent(html_5f97670fdee24ebd94b1f7dae023666b);
+            var html_16ed6c2d3f7f402283c2e14318b23b3c = $(`<div id="html_16ed6c2d3f7f402283c2e14318b23b3c" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Andhra Pradesh</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">432</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">11</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">7</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_1f97a57dda774fcca7b9e51625540bcb.setContent(html_16ed6c2d3f7f402283c2e14318b23b3c);
         
 
-        circle_53c906b51c5a499d94654ab44fdead63.bindPopup(popup_3e7469b5eff347bcb3ca22bb1c06cf95)
+        circle_c230d90551264bf8b980aac6ea2f0e97.bindPopup(popup_1f97a57dda774fcca7b9e51625540bcb)
         ;
 
         
     
     
-            var circle_a9d5ffe0c8554d3eb4d4bcab3c7f8c61 = L.circle(
+            var circle_9785d08f27ee4acfb02b865c34304c80 = L.circle(
                 [12.472918209000056, 92.78097500000008],
                 {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 1100, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_8ebe63d80cf94893a2ddc943640184c1 = L.popup({"maxWidth": "100%"});
+        var popup_d70a7c1ce24b4588885c30c31e00db17 = L.popup({"maxWidth": "100%"});
 
         
-            var html_004df47a2d3c42cca4e135d1f1014ba4 = $(`<div id="html_004df47a2d3c42cca4e135d1f1014ba4" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Andaman and Nicobar Islands</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">11</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">10</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_8ebe63d80cf94893a2ddc943640184c1.setContent(html_004df47a2d3c42cca4e135d1f1014ba4);
+            var html_0dc59e515fa34dc49954588d292d8417 = $(`<div id="html_0dc59e515fa34dc49954588d292d8417" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Andaman and Nicobar Islands</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">11</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">10</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_d70a7c1ce24b4588885c30c31e00db17.setContent(html_0dc59e515fa34dc49954588d292d8417);
         
 
-        circle_a9d5ffe0c8554d3eb4d4bcab3c7f8c61.bindPopup(popup_8ebe63d80cf94893a2ddc943640184c1)
+        circle_9785d08f27ee4acfb02b865c34304c80.bindPopup(popup_d70a7c1ce24b4588885c30c31e00db17)
         ;
 
         
     
     
-            var circle_7941da93e18e4737b99051f67a1e0079 = L.circle(
+            var circle_0c03affe6544403d9b8b2f83318a2d2b = L.circle(
                 [28.033781652000073, 94.66035909400006],
                 {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 100, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_211d2b956698461797b2ff125f575747 = L.popup({"maxWidth": "100%"});
+        var popup_25813cb3f6c84a56a953a7f6e5e4ba50 = L.popup({"maxWidth": "100%"});
 
         
-            var html_9e8262fcf1c240abb3678a85595726aa = $(`<div id="html_9e8262fcf1c240abb3678a85595726aa" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Arunachal Pradesh</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">1</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_211d2b956698461797b2ff125f575747.setContent(html_9e8262fcf1c240abb3678a85595726aa);
+            var html_192a97aad70a46e681a65fad7368b094 = $(`<div id="html_192a97aad70a46e681a65fad7368b094" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Arunachal Pradesh</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">1</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_25813cb3f6c84a56a953a7f6e5e4ba50.setContent(html_192a97aad70a46e681a65fad7368b094);
         
 
-        circle_7941da93e18e4737b99051f67a1e0079.bindPopup(popup_211d2b956698461797b2ff125f575747)
+        circle_0c03affe6544403d9b8b2f83318a2d2b.bindPopup(popup_25813cb3f6c84a56a953a7f6e5e4ba50)
         ;
 
         
     
     
-            var circle_249d7419da674c13a22817b18fc0334d = L.circle(
+            var circle_1bb9216a7b5f43ae98e082ea81400f54 = L.circle(
                 [26.32614358500007, 92.83015209500007],
-                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 2900, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 3100, "stroke": true, "weight": 1.5}
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_daba5e6936144128b47dfcf725511be4 = L.popup({"maxWidth": "100%"});
+        var popup_f818f8056b254c729b687ca5abcdc761 = L.popup({"maxWidth": "100%"});
 
         
-            var html_9ff6c65043a14fe4b13fe55096a03aa5 = $(`<div id="html_9ff6c65043a14fe4b13fe55096a03aa5" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Assam</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">29</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">1</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_daba5e6936144128b47dfcf725511be4.setContent(html_9ff6c65043a14fe4b13fe55096a03aa5);
+            var html_a7541df9cc314eb1b483b0a30995503b = $(`<div id="html_a7541df9cc314eb1b483b0a30995503b" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Assam</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">31</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">1</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_f818f8056b254c729b687ca5abcdc761.setContent(html_a7541df9cc314eb1b483b0a30995503b);
         
 
-        circle_249d7419da674c13a22817b18fc0334d.bindPopup(popup_daba5e6936144128b47dfcf725511be4)
+        circle_1bb9216a7b5f43ae98e082ea81400f54.bindPopup(popup_f818f8056b254c729b687ca5abcdc761)
         ;
 
         
     
     
-            var circle_ff6c4685f8214c1eb1213a540606c424 = L.circle(
+            var circle_1c56d9b329904b25b1937023f8740a25 = L.circle(
                 [25.151460000000046, 85.48728000000007],
                 {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 6400, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_6fc7710667274bc89402952f4b0c8e5e = L.popup({"maxWidth": "100%"});
+        var popup_8ff164d55eed4b73a08c402e8d726203 = L.popup({"maxWidth": "100%"});
 
         
-            var html_7115ea4ce8304d3e9664def1c1aebfd0 = $(`<div id="html_7115ea4ce8304d3e9664def1c1aebfd0" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Bihar</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">64</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">19</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">1</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_6fc7710667274bc89402952f4b0c8e5e.setContent(html_7115ea4ce8304d3e9664def1c1aebfd0);
+            var html_4576df5106f14c48b84edd249e893c20 = $(`<div id="html_4576df5106f14c48b84edd249e893c20" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Bihar</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">64</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">26</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">1</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_8ff164d55eed4b73a08c402e8d726203.setContent(html_4576df5106f14c48b84edd249e893c20);
         
 
-        circle_ff6c4685f8214c1eb1213a540606c424.bindPopup(popup_6fc7710667274bc89402952f4b0c8e5e)
+        circle_1c56d9b329904b25b1937023f8740a25.bindPopup(popup_8ff164d55eed4b73a08c402e8d726203)
         ;
 
         
     
     
-            var circle_73add9007aa24466a77a503f362f1727 = L.circle(
+            var circle_35f2289e3965435d91808586b4eb750b = L.circle(
                 [30.703410000000076, 76.78943000000005],
                 {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 2100, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_e9743e18f3384144888330971bc230b2 = L.popup({"maxWidth": "100%"});
+        var popup_45d50c549468425eb56166f8bd649bc7 = L.popup({"maxWidth": "100%"});
 
         
-            var html_c731562fe2534512a6234789e6586de9 = $(`<div id="html_c731562fe2534512a6234789e6586de9" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Chandigarh</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">21</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">7</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_e9743e18f3384144888330971bc230b2.setContent(html_c731562fe2534512a6234789e6586de9);
+            var html_78bf288e5ffd43b5b8eaf50846858126 = $(`<div id="html_78bf288e5ffd43b5b8eaf50846858126" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Chandigarh</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">21</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">7</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_45d50c549468425eb56166f8bd649bc7.setContent(html_78bf288e5ffd43b5b8eaf50846858126);
         
 
-        circle_73add9007aa24466a77a503f362f1727.bindPopup(popup_e9743e18f3384144888330971bc230b2)
+        circle_35f2289e3965435d91808586b4eb750b.bindPopup(popup_45d50c549468425eb56166f8bd649bc7)
         ;
 
         
     
     
-            var circle_fbdb2cc516374343a64e4dd69190b3c5 = L.circle(
+            var circle_7d112a35afca4b3fa9190043d745032a = L.circle(
                 [21.265149260000047, 82.04162083700004],
                 {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 3100, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_ffd745c1fb774380a7d72762ce7c74ce = L.popup({"maxWidth": "100%"});
+        var popup_cc3020e40a5545bb81ed476136f1be32 = L.popup({"maxWidth": "100%"});
 
         
-            var html_1adea9ef447c45f484c6e02800ddf1e4 = $(`<div id="html_1adea9ef447c45f484c6e02800ddf1e4" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Chhattisgarh</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">31</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">10</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_ffd745c1fb774380a7d72762ce7c74ce.setContent(html_1adea9ef447c45f484c6e02800ddf1e4);
+            var html_2a715ea1696a4d2b8c0d8209498cf136 = $(`<div id="html_2a715ea1696a4d2b8c0d8209498cf136" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Chhattisgarh</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">31</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">10</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_cc3020e40a5545bb81ed476136f1be32.setContent(html_2a715ea1696a4d2b8c0d8209498cf136);
         
 
-        circle_fbdb2cc516374343a64e4dd69190b3c5.bindPopup(popup_ffd745c1fb774380a7d72762ce7c74ce)
+        circle_7d112a35afca4b3fa9190043d745032a.bindPopup(popup_cc3020e40a5545bb81ed476136f1be32)
         ;
 
         
     
     
-            var circle_f081c5b8bd454d7ca1626f885a69e8c9 = L.circle(
+            var circle_0874f787d7e542099758c899f677f785 = L.circle(
                 [28.634100000000053, 77.21689000000003],
                 {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 115400, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_2a3befefea4a46329b8b343b6d66cab7 = L.popup({"maxWidth": "100%"});
+        var popup_605f2ac2ad7e42d5951b9bd083b85e30 = L.popup({"maxWidth": "100%"});
 
         
-            var html_a09fe2f7b5d14532a04dd0b9129bf479 = $(`<div id="html_a09fe2f7b5d14532a04dd0b9129bf479" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Delhi</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">1154</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">27</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">24</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_2a3befefea4a46329b8b343b6d66cab7.setContent(html_a09fe2f7b5d14532a04dd0b9129bf479);
+            var html_2384987465ec44d49c082310af78d776 = $(`<div id="html_2384987465ec44d49c082310af78d776" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Delhi</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">1154</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">27</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">24</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_605f2ac2ad7e42d5951b9bd083b85e30.setContent(html_2384987465ec44d49c082310af78d776);
         
 
-        circle_f081c5b8bd454d7ca1626f885a69e8c9.bindPopup(popup_2a3befefea4a46329b8b343b6d66cab7)
+        circle_0874f787d7e542099758c899f677f785.bindPopup(popup_605f2ac2ad7e42d5951b9bd083b85e30)
         ;
 
         
     
     
-            var circle_b7592b813d4e4f2790980edb802bedbe = L.circle(
+            var circle_405bc07f81ec456586bb30aa0aea20ce = L.circle(
                 [15.362577927000075, 74.05421646500008],
                 {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 700, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_7dfe60a5c0d14766ac7322a606bd5149 = L.popup({"maxWidth": "100%"});
+        var popup_8c456ab86092447284f0e8f8aaf88c87 = L.popup({"maxWidth": "100%"});
 
         
-            var html_92cf5e01988642c6815a6a5f37c614e6 = $(`<div id="html_92cf5e01988642c6815a6a5f37c614e6" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Goa</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">7</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">5</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_7dfe60a5c0d14766ac7322a606bd5149.setContent(html_92cf5e01988642c6815a6a5f37c614e6);
+            var html_d80c392b17a942de92889614e70526eb = $(`<div id="html_d80c392b17a942de92889614e70526eb" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Goa</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">7</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">5</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_8c456ab86092447284f0e8f8aaf88c87.setContent(html_d80c392b17a942de92889614e70526eb);
         
 
-        circle_b7592b813d4e4f2790980edb802bedbe.bindPopup(popup_7dfe60a5c0d14766ac7322a606bd5149)
+        circle_405bc07f81ec456586bb30aa0aea20ce.bindPopup(popup_8c456ab86092447284f0e8f8aaf88c87)
         ;
 
         
     
     
-            var circle_3215f7b8d87447e59cc2e7c219cb6efe = L.circle(
+            var circle_fb36fd6ae90547dfa08e74984ab6cc55 = L.circle(
                 [22.695412103000027, 71.57702777600008],
-                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 51600, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 53900, "stroke": true, "weight": 1.5}
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_bdc230a895964115bdd4ecaaefef7998 = L.popup({"maxWidth": "100%"});
+        var popup_a5dd8fbb05d8413caabbe9266c27b3f1 = L.popup({"maxWidth": "100%"});
 
         
-            var html_1d5ad22de7d44cc2ba5e05660476184f = $(`<div id="html_1d5ad22de7d44cc2ba5e05660476184f" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Gujarat</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">516</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">44</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">25</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_bdc230a895964115bdd4ecaaefef7998.setContent(html_1d5ad22de7d44cc2ba5e05660476184f);
+            var html_c753fa984d6649cda8627665e3b15907 = $(`<div id="html_c753fa984d6649cda8627665e3b15907" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Gujarat</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">539</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">47</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">26</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_a5dd8fbb05d8413caabbe9266c27b3f1.setContent(html_c753fa984d6649cda8627665e3b15907);
         
 
-        circle_3215f7b8d87447e59cc2e7c219cb6efe.bindPopup(popup_bdc230a895964115bdd4ecaaefef7998)
+        circle_fb36fd6ae90547dfa08e74984ab6cc55.bindPopup(popup_a5dd8fbb05d8413caabbe9266c27b3f1)
         ;
 
         
     
     
-            var circle_94400ab4286543b2bbda2081a96db933 = L.circle(
+            var circle_7a5b95905576462ca206e70d397ac7ce = L.circle(
                 [29.19646195900003, 76.34013631800008],
                 {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 18500, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_b8af2105708e4f4094fdd7e516d9c63e = L.popup({"maxWidth": "100%"});
+        var popup_563e3b0819ab4e63b8a2d68293be6bd8 = L.popup({"maxWidth": "100%"});
 
         
-            var html_f2af07eb02294909ac9cf61c795279d1 = $(`<div id="html_f2af07eb02294909ac9cf61c795279d1" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Haryana</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">185</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">29</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">3</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_b8af2105708e4f4094fdd7e516d9c63e.setContent(html_f2af07eb02294909ac9cf61c795279d1);
+            var html_741bb100167d43a5bc7549835a8f110a = $(`<div id="html_741bb100167d43a5bc7549835a8f110a" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Haryana</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">185</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">29</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">3</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_563e3b0819ab4e63b8a2d68293be6bd8.setContent(html_741bb100167d43a5bc7549835a8f110a);
         
 
-        circle_94400ab4286543b2bbda2081a96db933.bindPopup(popup_b8af2105708e4f4094fdd7e516d9c63e)
+        circle_7a5b95905576462ca206e70d397ac7ce.bindPopup(popup_563e3b0819ab4e63b8a2d68293be6bd8)
         ;
 
         
     
     
-            var circle_67cc06b27b824ee7a2c25ce416679e36 = L.circle(
+            var circle_a23de59cfb1e4147a135964654a4472b = L.circle(
                 [31.923656800000057, 77.25004871100003],
                 {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 3200, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_907fd6fa0203465c989ed7417584f051 = L.popup({"maxWidth": "100%"});
+        var popup_90c10cdf4beb44b7ae292bece37a4af8 = L.popup({"maxWidth": "100%"});
 
         
-            var html_8477207ada6a4767956b8bfce3bb1cfe = $(`<div id="html_8477207ada6a4767956b8bfce3bb1cfe" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Himachal Pradesh</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">32</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">13</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">1</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_907fd6fa0203465c989ed7417584f051.setContent(html_8477207ada6a4767956b8bfce3bb1cfe);
+            var html_7facbd94e08a4a4fbdec5d47f38ac809 = $(`<div id="html_7facbd94e08a4a4fbdec5d47f38ac809" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Himachal Pradesh</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">32</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">13</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">1</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_90c10cdf4beb44b7ae292bece37a4af8.setContent(html_7facbd94e08a4a4fbdec5d47f38ac809);
         
 
-        circle_67cc06b27b824ee7a2c25ce416679e36.bindPopup(popup_907fd6fa0203465c989ed7417584f051)
+        circle_a23de59cfb1e4147a135964654a4472b.bindPopup(popup_90c10cdf4beb44b7ae292bece37a4af8)
         ;
 
         
     
     
-            var circle_feea9159bdff411a9772d02fa73367bc = L.circle(
+            var circle_17c53eac9c894ed79f5c0313eafb8773 = L.circle(
                 [34.64385349200006, 76.31064825900006],
                 {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 24500, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_fcbafb67f9b14b2fa76ecffbd4a98800 = L.popup({"maxWidth": "100%"});
+        var popup_6d5eb0b77dfd4faea8380f64a9009005 = L.popup({"maxWidth": "100%"});
 
         
-            var html_7b9f051fc4b84f809b518b2f0113747b = $(`<div id="html_7b9f051fc4b84f809b518b2f0113747b" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Jammu and Kashmir</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">245</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">6</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">4</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_fcbafb67f9b14b2fa76ecffbd4a98800.setContent(html_7b9f051fc4b84f809b518b2f0113747b);
+            var html_665e7a5d9adc420aa9acc858f067504b = $(`<div id="html_665e7a5d9adc420aa9acc858f067504b" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Jammu and Kashmir</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">245</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">6</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">4</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_6d5eb0b77dfd4faea8380f64a9009005.setContent(html_665e7a5d9adc420aa9acc858f067504b);
         
 
-        circle_feea9159bdff411a9772d02fa73367bc.bindPopup(popup_fcbafb67f9b14b2fa76ecffbd4a98800)
+        circle_17c53eac9c894ed79f5c0313eafb8773.bindPopup(popup_6d5eb0b77dfd4faea8380f64a9009005)
         ;
 
         
     
     
-            var circle_ada6f61d4ae44d4ab5232b27698c120b = L.circle(
+            var circle_e9a1f318932c4de6a09956f76e8010fc = L.circle(
                 [23.65396590300003, 85.55996217400008],
                 {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 1900, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_b0f94a9327a340b79e4d547be12aaf1d = L.popup({"maxWidth": "100%"});
+        var popup_25a71c3c16744c3883e3c3f67ce7026a = L.popup({"maxWidth": "100%"});
 
         
-            var html_f950c832dd8b4f41ad0470c1b928467d = $(`<div id="html_f950c832dd8b4f41ad0470c1b928467d" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Jharkhand</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">19</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">2</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_b0f94a9327a340b79e4d547be12aaf1d.setContent(html_f950c832dd8b4f41ad0470c1b928467d);
+            var html_165840703be0488ab86fc759c1896374 = $(`<div id="html_165840703be0488ab86fc759c1896374" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Jharkhand</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">19</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">2</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_25a71c3c16744c3883e3c3f67ce7026a.setContent(html_165840703be0488ab86fc759c1896374);
         
 
-        circle_ada6f61d4ae44d4ab5232b27698c120b.bindPopup(popup_b0f94a9327a340b79e4d547be12aaf1d)
+        circle_e9a1f318932c4de6a09956f76e8010fc.bindPopup(popup_25a71c3c16744c3883e3c3f67ce7026a)
         ;
 
         
     
     
-            var circle_a322ff75dad84c869caa1519314e8fb6 = L.circle(
+            var circle_10e226380408451f90f178a3ab1b6a3f = L.circle(
                 [14.705918599000027, 76.17046946700003],
-                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 23200, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 24700, "stroke": true, "weight": 1.5}
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_6e827b4e0ccc401c949d0447185db3b2 = L.popup({"maxWidth": "100%"});
+        var popup_1846a34cd1c145f68a57ec5dbe74719a = L.popup({"maxWidth": "100%"});
 
         
-            var html_22aa7f440958483e9fab865c149af3da = $(`<div id="html_22aa7f440958483e9fab865c149af3da" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Karnataka</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">232</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">57</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">6</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_6e827b4e0ccc401c949d0447185db3b2.setContent(html_22aa7f440958483e9fab865c149af3da);
+            var html_ccc4fa89ae8348848c42afd72716f2b8 = $(`<div id="html_ccc4fa89ae8348848c42afd72716f2b8" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Karnataka</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">247</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">59</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">6</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_1846a34cd1c145f68a57ec5dbe74719a.setContent(html_ccc4fa89ae8348848c42afd72716f2b8);
         
 
-        circle_a322ff75dad84c869caa1519314e8fb6.bindPopup(popup_6e827b4e0ccc401c949d0447185db3b2)
+        circle_10e226380408451f90f178a3ab1b6a3f.bindPopup(popup_1846a34cd1c145f68a57ec5dbe74719a)
         ;
 
         
     
     
-            var circle_d1f665dbbcfd4ecaad074de469fb0e9c = L.circle(
+            var circle_4242390807f047499f7823d801684753 = L.circle(
                 [10.447255617000053, 76.40890634100003],
                 {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 37600, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_c66e60df90fe4a469da5132c7a7f7508 = L.popup({"maxWidth": "100%"});
+        var popup_de2a9749402a4dbf9bd174c4effacc0a = L.popup({"maxWidth": "100%"});
 
         
-            var html_4e64316c700e4728b3e7b4342517c25e = $(`<div id="html_4e64316c700e4728b3e7b4342517c25e" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Kerala</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">376</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">179</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">2</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_c66e60df90fe4a469da5132c7a7f7508.setContent(html_4e64316c700e4728b3e7b4342517c25e);
+            var html_6a8bebbe88f243ab845404e87220cc6b = $(`<div id="html_6a8bebbe88f243ab845404e87220cc6b" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Kerala</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">376</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">179</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">3</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_de2a9749402a4dbf9bd174c4effacc0a.setContent(html_6a8bebbe88f243ab845404e87220cc6b);
         
 
-        circle_d1f665dbbcfd4ecaad074de469fb0e9c.bindPopup(popup_c66e60df90fe4a469da5132c7a7f7508)
+        circle_4242390807f047499f7823d801684753.bindPopup(popup_de2a9749402a4dbf9bd174c4effacc0a)
         ;
 
         
     
     
-            var circle_9a403f51ac1d4b21bf32ecda86eb5c01 = L.circle(
+            var circle_48c417d67b8e4dd6bcee7b98f402b64b = L.circle(
                 [34.50000000000006, 77.50000000000007],
                 {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 1500, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_ca7c5c251a204436a73b5e000cb0bca7 = L.popup({"maxWidth": "100%"});
+        var popup_51fe78fa2e184d659b59debcf264feba = L.popup({"maxWidth": "100%"});
 
         
-            var html_a48f71b49fa74990a482b2b8be91b134 = $(`<div id="html_a48f71b49fa74990a482b2b8be91b134" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Ladakh</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">15</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">10</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_ca7c5c251a204436a73b5e000cb0bca7.setContent(html_a48f71b49fa74990a482b2b8be91b134);
+            var html_0b35cdc682ed4262be5c52e0f750641f = $(`<div id="html_0b35cdc682ed4262be5c52e0f750641f" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Ladakh</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">15</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">10</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_51fe78fa2e184d659b59debcf264feba.setContent(html_0b35cdc682ed4262be5c52e0f750641f);
         
 
-        circle_9a403f51ac1d4b21bf32ecda86eb5c01.bindPopup(popup_ca7c5c251a204436a73b5e000cb0bca7)
+        circle_48c417d67b8e4dd6bcee7b98f402b64b.bindPopup(popup_51fe78fa2e184d659b59debcf264feba)
         ;
 
         
     
     
-            var circle_2317b3a461d64899b1279e85d96e0e71 = L.circle(
+            var circle_11a74352c17d42d495c8468549f85741 = L.circle(
                 [23.543002144000074, 78.29754465700006],
-                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 56400, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 60400, "stroke": true, "weight": 1.5}
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_44a653ea7e4941de944586bdc3fe36db = L.popup({"maxWidth": "100%"});
+        var popup_354ca1e256b6478fae8e0c5be1b140a9 = L.popup({"maxWidth": "100%"});
 
         
-            var html_8773026c9a654dde940267a240262719 = $(`<div id="html_8773026c9a654dde940267a240262719" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Madhya Pradesh</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">564</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">36</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_44a653ea7e4941de944586bdc3fe36db.setContent(html_8773026c9a654dde940267a240262719);
+            var html_49eae971a85645ecb711d799528396cd = $(`<div id="html_49eae971a85645ecb711d799528396cd" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Madhya Pradesh</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">604</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">44</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">43</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_354ca1e256b6478fae8e0c5be1b140a9.setContent(html_49eae971a85645ecb711d799528396cd);
         
 
-        circle_2317b3a461d64899b1279e85d96e0e71.bindPopup(popup_44a653ea7e4941de944586bdc3fe36db)
+        circle_11a74352c17d42d495c8468549f85741.bindPopup(popup_354ca1e256b6478fae8e0c5be1b140a9)
         ;
 
         
     
     
-            var circle_5c5506ed3df544089ee3bce83a5727c9 = L.circle(
+            var circle_6ff475fa9a33483b87f4faec7b3cb703 = L.circle(
                 [19.03681000000006, 73.01582000000008],
                 {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 198500, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_ac2b0c712906476a8c21c57d340337ca = L.popup({"maxWidth": "100%"});
+        var popup_7b787a3adb9148f7b29bc588b46c5cfe = L.popup({"maxWidth": "100%"});
 
         
-            var html_5e0602e330674dcda0d425da494f8704 = $(`<div id="html_5e0602e330674dcda0d425da494f8704" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Maharashtra</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">1985</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">217</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">149</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_ac2b0c712906476a8c21c57d340337ca.setContent(html_5e0602e330674dcda0d425da494f8704);
+            var html_2edd79e0d95c48b3a96f375e39a2a94b = $(`<div id="html_2edd79e0d95c48b3a96f375e39a2a94b" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Maharashtra</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">1985</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">217</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">149</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_7b787a3adb9148f7b29bc588b46c5cfe.setContent(html_2edd79e0d95c48b3a96f375e39a2a94b);
         
 
-        circle_5c5506ed3df544089ee3bce83a5727c9.bindPopup(popup_ac2b0c712906476a8c21c57d340337ca)
+        circle_6ff475fa9a33483b87f4faec7b3cb703.bindPopup(popup_7b787a3adb9148f7b29bc588b46c5cfe)
         ;
 
         
     
     
-            var circle_8a1b9646f7324aefa164bced27bd14db = L.circle(
+            var circle_b34257f6490f47a38d5ad72d23bdaf89 = L.circle(
                 [24.731636637000065, 93.88394228400006],
                 {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 200, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_7abc13e9543c4dcc987fe247861fc37b = L.popup({"maxWidth": "100%"});
+        var popup_6808066c90064b90982ac94b590455e9 = L.popup({"maxWidth": "100%"});
 
         
-            var html_4e46ade24ee441de97f51905be5a0a57 = $(`<div id="html_4e46ade24ee441de97f51905be5a0a57" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Manipur</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">2</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">1</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_7abc13e9543c4dcc987fe247861fc37b.setContent(html_4e46ade24ee441de97f51905be5a0a57);
+            var html_1a305c4379a6465baf79860fc137e6c4 = $(`<div id="html_1a305c4379a6465baf79860fc137e6c4" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Manipur</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">2</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">1</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_6808066c90064b90982ac94b590455e9.setContent(html_1a305c4379a6465baf79860fc137e6c4);
         
 
-        circle_8a1b9646f7324aefa164bced27bd14db.bindPopup(popup_7abc13e9543c4dcc987fe247861fc37b)
+        circle_b34257f6490f47a38d5ad72d23bdaf89.bindPopup(popup_6808066c90064b90982ac94b590455e9)
         ;
 
         
     
     
-            var circle_a89ccc6a1020423d96f22724ee62562b = L.circle(
+            var circle_01286bffe92c4a288ad6922fab1fd109 = L.circle(
                 [23.307804220000037, 92.82891654100008],
                 {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 100, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_069eb65eab924197b844a28dffde73b2 = L.popup({"maxWidth": "100%"});
+        var popup_8c6393cec3634e159bdeaddbbcecfcc5 = L.popup({"maxWidth": "100%"});
 
         
-            var html_2d8abebbb63e4ff997a92b2dbf3b7ef8 = $(`<div id="html_2d8abebbb63e4ff997a92b2dbf3b7ef8" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Mizoram</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">1</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_069eb65eab924197b844a28dffde73b2.setContent(html_2d8abebbb63e4ff997a92b2dbf3b7ef8);
+            var html_60d5f43cf44d4660ab47aaf773dc0bcf = $(`<div id="html_60d5f43cf44d4660ab47aaf773dc0bcf" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Mizoram</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">1</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_8c6393cec3634e159bdeaddbbcecfcc5.setContent(html_60d5f43cf44d4660ab47aaf773dc0bcf);
         
 
-        circle_a89ccc6a1020423d96f22724ee62562b.bindPopup(popup_069eb65eab924197b844a28dffde73b2)
+        circle_01286bffe92c4a288ad6922fab1fd109.bindPopup(popup_8c6393cec3634e159bdeaddbbcecfcc5)
         ;
 
         
     
     
-            var circle_6ff6a13ca96f4160864ecaba6c764a3f = L.circle(
+            var circle_d80f4b65440a476fb85cd010d5fa8b8a = L.circle(
+                [26.059338800000035, 94.47204729200008],
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 100, "stroke": true, "weight": 1.5}
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
+        
+    
+        var popup_88d3e7b7627746eba3a935396b19729d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_19787ec1821c4e77b79e8490369a926e = $(`<div id="html_19787ec1821c4e77b79e8490369a926e" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Nagaland</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">1</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_88d3e7b7627746eba3a935396b19729d.setContent(html_19787ec1821c4e77b79e8490369a926e);
+        
+
+        circle_d80f4b65440a476fb85cd010d5fa8b8a.bindPopup(popup_88d3e7b7627746eba3a935396b19729d)
+        ;
+
+        
+    
+    
+            var circle_99e3f399eb1246d8b3cd8920f84ab284 = L.circle(
                 [20.926660000000027, 85.00127000000003],
                 {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 5400, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_cd480537c92b4128a03999480e1a8822 = L.popup({"maxWidth": "100%"});
+        var popup_a2692879a94c4291b390b8772489942c = L.popup({"maxWidth": "100%"});
 
         
-            var html_03b8f538b6e7461487f22b8d4c659e40 = $(`<div id="html_03b8f538b6e7461487f22b8d4c659e40" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Odisha</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">54</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">12</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">1</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_cd480537c92b4128a03999480e1a8822.setContent(html_03b8f538b6e7461487f22b8d4c659e40);
+            var html_698bd036b44e47a79cbe5ee3dee5eb43 = $(`<div id="html_698bd036b44e47a79cbe5ee3dee5eb43" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Odisha</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">54</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">12</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">1</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_a2692879a94c4291b390b8772489942c.setContent(html_698bd036b44e47a79cbe5ee3dee5eb43);
         
 
-        circle_6ff6a13ca96f4160864ecaba6c764a3f.bindPopup(popup_cd480537c92b4128a03999480e1a8822)
+        circle_99e3f399eb1246d8b3cd8920f84ab284.bindPopup(popup_a2692879a94c4291b390b8772489942c)
         ;
 
         
     
     
-            var circle_844dce798da04a13b4545170c1946e3a = L.circle(
+            var circle_efbce97a5777490b84baed7cf10b41f0 = L.circle(
                 [11.92993000000007, 79.82470000000006],
                 {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 700, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_ea6bf7ff28d44f89b15d10a8aa493592 = L.popup({"maxWidth": "100%"});
+        var popup_283a0efbc08d4215bbc3301f5c0b3c9f = L.popup({"maxWidth": "100%"});
 
         
-            var html_73141d2474c24478a151abe95e7c5db0 = $(`<div id="html_73141d2474c24478a151abe95e7c5db0" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Puducherry</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">7</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">1</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_ea6bf7ff28d44f89b15d10a8aa493592.setContent(html_73141d2474c24478a151abe95e7c5db0);
+            var html_0f35ee7fee70455f9694d3ed99ca9879 = $(`<div id="html_0f35ee7fee70455f9694d3ed99ca9879" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Puducherry</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">7</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">1</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_283a0efbc08d4215bbc3301f5c0b3c9f.setContent(html_0f35ee7fee70455f9694d3ed99ca9879);
         
 
-        circle_844dce798da04a13b4545170c1946e3a.bindPopup(popup_ea6bf7ff28d44f89b15d10a8aa493592)
+        circle_efbce97a5777490b84baed7cf10b41f0.bindPopup(popup_283a0efbc08d4215bbc3301f5c0b3c9f)
         ;
 
         
     
     
-            var circle_50eb838ee88f4d2385dab12ddc67f7ef = L.circle(
+            var circle_25b83a7651ea48fe8d19c82d62916b31 = L.circle(
                 [30.843241601000045, 75.41747895900005],
-                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 15100, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 16700, "stroke": true, "weight": 1.5}
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_d09949efbae940928788d594c770cc51 = L.popup({"maxWidth": "100%"});
+        var popup_653ae0f5d401495580785051c9202bf1 = L.popup({"maxWidth": "100%"});
 
         
-            var html_3950bd64b5944586933e8c4dd6542a72 = $(`<div id="html_3950bd64b5944586933e8c4dd6542a72" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Punjab</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">151</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">5</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">11</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_d09949efbae940928788d594c770cc51.setContent(html_3950bd64b5944586933e8c4dd6542a72);
+            var html_c5155e26b77f4694a72028e83cd48467 = $(`<div id="html_c5155e26b77f4694a72028e83cd48467" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Punjab</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">167</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">14</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">11</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_653ae0f5d401495580785051c9202bf1.setContent(html_c5155e26b77f4694a72028e83cd48467);
         
 
-        circle_50eb838ee88f4d2385dab12ddc67f7ef.bindPopup(popup_d09949efbae940928788d594c770cc51)
+        circle_25b83a7651ea48fe8d19c82d62916b31.bindPopup(popup_653ae0f5d401495580785051c9202bf1)
         ;
 
         
     
     
-            var circle_7aa915c7424b439180201510c36aabc2 = L.circle(
+            var circle_d79b06a48dc04fe59f01e0b1edb8252b = L.circle(
                 [26.58650209000007, 73.84574451200007],
-                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 80400, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 81200, "stroke": true, "weight": 1.5}
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_5df7f9764a1749d1abbce9547f23f46e = L.popup({"maxWidth": "100%"});
+        var popup_4ab4c75085a840e4aaaafe94c16918f7 = L.popup({"maxWidth": "100%"});
 
         
-            var html_86e45e264a3041c8aeb896b8cd619f32 = $(`<div id="html_86e45e264a3041c8aeb896b8cd619f32" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Rajasthan</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">804</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">21</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">3</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_5df7f9764a1749d1abbce9547f23f46e.setContent(html_86e45e264a3041c8aeb896b8cd619f32);
+            var html_07d894691ce54e79a174f1883ab5814a = $(`<div id="html_07d894691ce54e79a174f1883ab5814a" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Rajasthan</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">812</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">21</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">3</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_4ab4c75085a840e4aaaafe94c16918f7.setContent(html_07d894691ce54e79a174f1883ab5814a);
         
 
-        circle_7aa915c7424b439180201510c36aabc2.bindPopup(popup_5df7f9764a1749d1abbce9547f23f46e)
+        circle_d79b06a48dc04fe59f01e0b1edb8252b.bindPopup(popup_4ab4c75085a840e4aaaafe94c16918f7)
         ;
 
         
     
     
-            var circle_2750942adf9c4a538863e872290e8aec = L.circle(
+            var circle_dd2ad833c95244a2ae0ab364bd4d476d = L.circle(
                 [11.013249830000065, 78.40968946000005],
-                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 104300, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 107500, "stroke": true, "weight": 1.5}
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_b0e2752ea5814b64a9f1a03089de6c61 = L.popup({"maxWidth": "100%"});
+        var popup_dc147585a3004b3daf58b94a4445a9ef = L.popup({"maxWidth": "100%"});
 
         
-            var html_ac06728ba0ef46cb8d791e7e31076cf5 = $(`<div id="html_ac06728ba0ef46cb8d791e7e31076cf5" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Tamil Nadu</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">1043</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">50</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">11</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_b0e2752ea5814b64a9f1a03089de6c61.setContent(html_ac06728ba0ef46cb8d791e7e31076cf5);
+            var html_979a015aa0b8417d8a504a1ffb3a2691 = $(`<div id="html_979a015aa0b8417d8a504a1ffb3a2691" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Tamil Nadu</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">1075</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">50</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">11</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_dc147585a3004b3daf58b94a4445a9ef.setContent(html_979a015aa0b8417d8a504a1ffb3a2691);
         
 
-        circle_2750942adf9c4a538863e872290e8aec.bindPopup(popup_b0e2752ea5814b64a9f1a03089de6c61)
+        circle_dd2ad833c95244a2ae0ab364bd4d476d.bindPopup(popup_dc147585a3004b3daf58b94a4445a9ef)
         ;
 
         
     
     
-            var circle_2167e7a973384f3da361cfd458db40d3 = L.circle(
+            var circle_fbdc293a1c464889829944f913a3f000 = L.circle(
                 [18.000000000000053, 79.50000000000007],
-                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 50400, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+                {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 56200, "stroke": true, "weight": 1.5}
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_ac8b0b6493914b799b582fa2549eee2d = L.popup({"maxWidth": "100%"});
+        var popup_60d18a79ebf94824be7f61f0929da34b = L.popup({"maxWidth": "100%"});
 
         
-            var html_00fc8a9e6d0f4e3caa458f29652edc54 = $(`<div id="html_00fc8a9e6d0f4e3caa458f29652edc54" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Telengana</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">504</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">43</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">9</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_ac8b0b6493914b799b582fa2549eee2d.setContent(html_00fc8a9e6d0f4e3caa458f29652edc54);
+            var html_84787de884a24276bdcbba3533b47a02 = $(`<div id="html_84787de884a24276bdcbba3533b47a02" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Telengana</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">562</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">100</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">16</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_60d18a79ebf94824be7f61f0929da34b.setContent(html_84787de884a24276bdcbba3533b47a02);
         
 
-        circle_2167e7a973384f3da361cfd458db40d3.bindPopup(popup_ac8b0b6493914b799b582fa2549eee2d)
+        circle_fbdc293a1c464889829944f913a3f000.bindPopup(popup_60d18a79ebf94824be7f61f0929da34b)
         ;
 
         
     
     
-            var circle_2f249fc0124947a389698f8315a37971 = L.circle(
+            var circle_0b4d4749f26342f884d8f64b95366335 = L.circle(
                 [23.74652194700008, 91.74011046400005],
                 {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 200, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_280c9614964646edb774bbfe8896d0ec = L.popup({"maxWidth": "100%"});
+        var popup_ae025bf48d0b48a3a32355691d41e13b = L.popup({"maxWidth": "100%"});
 
         
-            var html_b7feeadd5ee441b19f291977e3f18eb3 = $(`<div id="html_b7feeadd5ee441b19f291977e3f18eb3" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Tripura</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">2</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_280c9614964646edb774bbfe8896d0ec.setContent(html_b7feeadd5ee441b19f291977e3f18eb3);
+            var html_e0dfdd9885844485a538b160d8f5aead = $(`<div id="html_e0dfdd9885844485a538b160d8f5aead" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Tripura</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">2</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_ae025bf48d0b48a3a32355691d41e13b.setContent(html_e0dfdd9885844485a538b160d8f5aead);
         
 
-        circle_2f249fc0124947a389698f8315a37971.bindPopup(popup_280c9614964646edb774bbfe8896d0ec)
+        circle_0b4d4749f26342f884d8f64b95366335.bindPopup(popup_ae025bf48d0b48a3a32355691d41e13b)
         ;
 
         
     
     
-            var circle_c20fda21034c406b83ea58bc36ffc035 = L.circle(
+            var circle_0b7c427c68734a68bce1579a9585822f = L.circle(
                 [30.15483757800007, 79.20756428100003],
                 {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 3500, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_c3ed168203ef4e658cfab81ff11e1d8c = L.popup({"maxWidth": "100%"});
+        var popup_f683a916edb8485f8da185003589273f = L.popup({"maxWidth": "100%"});
 
         
-            var html_897ac1584ca947e7b383b036164932f8 = $(`<div id="html_897ac1584ca947e7b383b036164932f8" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Uttarakhand</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">35</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">5</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_c3ed168203ef4e658cfab81ff11e1d8c.setContent(html_897ac1584ca947e7b383b036164932f8);
+            var html_8ea1c12194a343acae72525a9341c3a7 = $(`<div id="html_8ea1c12194a343acae72525a9341c3a7" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Uttarakhand</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">35</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">5</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">0</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_f683a916edb8485f8da185003589273f.setContent(html_8ea1c12194a343acae72525a9341c3a7);
         
 
-        circle_c20fda21034c406b83ea58bc36ffc035.bindPopup(popup_c3ed168203ef4e658cfab81ff11e1d8c)
+        circle_0b7c427c68734a68bce1579a9585822f.bindPopup(popup_f683a916edb8485f8da185003589273f)
         ;
 
         
     
     
-            var circle_45d9c246c89a45ba893e2fac1ff544b1 = L.circle(
+            var circle_399831518bd541c6bd2aa1409170ea4a = L.circle(
                 [26.92876647400004, 80.56369184900007],
                 {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 48300, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_823f44f91aba471b8a2d80b89df24cf6 = L.popup({"maxWidth": "100%"});
+        var popup_a08533587eb0440997976bbd12427a09 = L.popup({"maxWidth": "100%"});
 
         
-            var html_2175a1ebd5494573994de2f780313d2b = $(`<div id="html_2175a1ebd5494573994de2f780313d2b" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Uttar Pradesh</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">483</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">46</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">5</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_823f44f91aba471b8a2d80b89df24cf6.setContent(html_2175a1ebd5494573994de2f780313d2b);
+            var html_ec1f1b13143348fe8fd2e3fb3c3d94ef = $(`<div id="html_ec1f1b13143348fe8fd2e3fb3c3d94ef" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">Uttar Pradesh</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">483</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">47</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">5</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_a08533587eb0440997976bbd12427a09.setContent(html_ec1f1b13143348fe8fd2e3fb3c3d94ef);
         
 
-        circle_45d9c246c89a45ba893e2fac1ff544b1.bindPopup(popup_823f44f91aba471b8a2d80b89df24cf6)
+        circle_399831518bd541c6bd2aa1409170ea4a.bindPopup(popup_a08533587eb0440997976bbd12427a09)
         ;
 
         
     
     
-            var circle_b771cf2248294089a9ab4dcc6eb3b8f9 = L.circle(
+            var circle_0c9ffb30a20e4a089b01ce19f43192b5 = L.circle(
                 [23.79775953100005, 87.98640557800007],
                 {"bubblingMouseEvents": true, "color": "crimson", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "crimson", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 0.8, "radius": 15200, "stroke": true, "weight": 1.5}
-            ).addTo(map_ff9e3cd8e1d347d190a3b3070cf51716);
+            ).addTo(map_74d37aa2f20d4dbdbd95e250985bead0);
         
     
-        var popup_f49d0ea449174e8aa713d659f0e4a57e = L.popup({"maxWidth": "100%"});
+        var popup_db7b64052d09495e8c58fe6bf8ea36c9 = L.popup({"maxWidth": "100%"});
 
         
-            var html_f16e60c5859c4d50a834daba2514d050 = $(`<div id="html_f16e60c5859c4d50a834daba2514d050" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">West Bengal</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">152</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">29</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">7</td>         </tr>     </tbody> </table> </div>`)[0];
-            popup_f49d0ea449174e8aa713d659f0e4a57e.setContent(html_f16e60c5859c4d50a834daba2514d050);
+            var html_28676df07c984dd7a2129656f70b5fd3 = $(`<div id="html_28676df07c984dd7a2129656f70b5fd3" style="width: 100.0%; height: 100.0%;"> <table border-spacing: 0; border-collapse: collapse; display: block; width: 100%; overflow: auto;">     <thead>     <tr>         <th colspan="3" style="padding: 6px 13px;font-weight: 600; border: 1px solid #dfe2e5;">West Bengal</th>     </tr>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="color: darkorange; padding: 0px 5px;             border: 1px solid #dfe2e5;">Active Cases</td>             <td style="padding: 0px 5px; color: red;             border: 1px solid #dfe2e5;">Deaths</td>             <td style="padding: 0px 5px; color: mediumseagreen;             border: 1px solid #dfe2e5;">Recovered</td>         </tr>     </thead>     <tbody>         <tr style="border-top: 1px solid #c6cbd1; background-color: #fff; font-weight: bolder;">             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">152</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">29</td>             <td style="padding: 6px 13px;             border: 1px solid #dfe2e5;">7</td>         </tr>     </tbody> </table> </div>`)[0];
+            popup_db7b64052d09495e8c58fe6bf8ea36c9.setContent(html_28676df07c984dd7a2129656f70b5fd3);
         
 
-        circle_b771cf2248294089a9ab4dcc6eb3b8f9.bindPopup(popup_f49d0ea449174e8aa713d659f0e4a57e)
+        circle_0c9ffb30a20e4a089b01ce19f43192b5.bindPopup(popup_db7b64052d09495e8c58fe6bf8ea36c9)
         ;
 
         
     
     
-            map_ff9e3cd8e1d347d190a3b3070cf51716.scrollEnabled = true;
+            map_74d37aa2f20d4dbdbd95e250985bead0.scrollEnabled = true;
 
-            map_ff9e3cd8e1d347d190a3b3070cf51716.toggleScroll = function() {
+            map_74d37aa2f20d4dbdbd95e250985bead0.toggleScroll = function() {
                 if (this.scrollEnabled) {
                     this.scrollEnabled = false;
                     this.scrollWheelZoom.disable();
@@ -685,6 +704,6 @@
                     this.scrollWheelZoom.enable();
                 }
             };
-            map_ff9e3cd8e1d347d190a3b3070cf51716.toggleScroll();
+            map_74d37aa2f20d4dbdbd95e250985bead0.toggleScroll();
         
 </script>
