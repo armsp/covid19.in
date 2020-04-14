@@ -130,8 +130,18 @@ ax.xaxis.set_major_formatter(myFmt)
 ax.grid(color='#f3f3f3', linestyle=':', linewidth=0.5)##cdcdcd #f3f3f3 #D3D3D3
 ratio = 0.5
 ax.set_aspect(1.0/ax.get_data_ratio()*ratio)
-plt.xticks(fontsize=6, rotation=75)
+plt.xticks(fontsize=6, rotation=30, ha='right')
 plt.yticks(fontsize=6)
+
+ax.spines['top'].set_visible(False)
+ax.spines['right'].set_visible(False)
+#ax.spines['left'].set_edgecolor('gray')
+ax.get_xaxis().tick_bottom()
+ax.get_yaxis().tick_left()
+ax.tick_params(axis="x", direction='in', length=5)
+ax.get_yaxis().set_visible(False)
+ax.spines['bottom'].set_linewidth(0.5)
+ax.spines['left'].set_linewidth(0.5)
 
 #trans = transforms.blended_transform_factory(ax.get_yticklabels()[0].get_transform(), ax.transData)
 #ax.text(0, cases_max, color="red", s=cases_max, transform=trans, ha="right", va="center")
@@ -149,7 +159,7 @@ ax.set_xticks(xt)
 ax.axvline(last_x_tick, ls='dotted', linewidth=0.5)
 
 plt.savefig("graph.svg", format='svg', dpi=1200, bbox_inches='tight')
-plt.show()
+#plt.show()
 
 # Make index.html
 # accquire latest statistics
