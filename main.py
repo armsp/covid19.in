@@ -165,6 +165,8 @@ ax.get_xaxis().tick_bottom()
 ax.get_yaxis().tick_left()
 ax.tick_params(axis="x", direction='in', length=5)
 ax.get_yaxis().set_visible(False)
+ax.spines['bottom'].set_linewidth(0.5)
+ax.spines['left'].set_linewidth(0.5)
 ax.grid(color='#f3f3f3', linestyle=':', linewidth=0.5)##cdcdcd #f3f3f3 #D3D3D3
 ratio = 0.5
 ax.set_aspect(1.0/ax.get_data_ratio()*ratio)
