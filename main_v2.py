@@ -130,8 +130,8 @@ ax.xaxis.set_major_formatter(myFmt)
 ax.grid(color='#f3f3f3', linestyle=':', linewidth=0.5)##cdcdcd #f3f3f3 #D3D3D3
 ratio = 0.5
 ax.set_aspect(1.0/ax.get_data_ratio()*ratio)
-plt.xticks(fontsize=6, rotation=70, ha='right')
-plt.yticks(fontsize=6)
+plt.xticks(fontsize=5, rotation=70)#, ha='right')
+#plt.yticks(fontsize=6)
 
 ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
@@ -151,10 +151,16 @@ ax.text(0.01, deaths_max, deaths_max, color="red", transform=ax.get_yaxis_transf
 ax.text(0.01, recoveries_max, recoveries_max, color="green", transform=ax.get_yaxis_transform(), ha="left", va="bottom")
 #ax.annotate(cases_max, [ax.get_xticks()[-1], cases_max], va='bottom', ha='right', color='red')
 #ax.annotate(deaths_max, [ax.get_xticks()[-1], deaths_max], va='bottom', ha='left', color='red')
-xt = ax.get_xticks()
+xt = ax.get_xticks().tolist()
 last_x_tick = date2num(plot_df['index'].values[-1])
-xt = np.append(xt, last_x_tick)
-xtl = xt.tolist()
+if xt[-1] > last_x_tick:
+    xt.pop(-1)
+else:
+    if abs(xt[-1] - last_x_tick) < (xt[1] - xt[0])/3:
+        xt.pop(-1)
+#xt = np.append(xt, last_x_tick)
+xt.append(last_x_tick)
+#xtl = xt.tolist()
 ax.set_xticks(xt)
 ax.axvline(last_x_tick, ls='dotted', linewidth=0.5)
 
