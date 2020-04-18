@@ -130,7 +130,7 @@ ax.xaxis.set_major_formatter(myFmt)
 ax.grid(color='#f3f3f3', linestyle=':', linewidth=0.5)##cdcdcd #f3f3f3 #D3D3D3
 ratio = 0.5
 ax.set_aspect(1.0/ax.get_data_ratio()*ratio)
-plt.xticks(fontsize=5, rotation=70)#, ha='right')
+plt.xticks(fontsize=5, rotation=0)#, ha='right')
 #plt.yticks(fontsize=6)
 
 ax.spines['top'].set_visible(False)
