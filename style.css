@@ -21,13 +21,26 @@ a{
 }
 
 .link-buttons{
- font-family: "Roboto Mono", monospace;
+  grid-column: span 6;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: "Roboto Mono", monospace;
   font-size: larger;
   font-weight: bolder;
   /*text-align: center;*/
   padding: 1em;
 }
-
+.link-button_item{
+  /* box-sizing: border-box; */
+  flex: 1 1 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  /* margin: 0; */
+}
 .link-button_item:hover {
   background: #4faaff; /* #61b3ff #4faaff ; #00bbff; /*#4faaff*/
   color: white
@@ -124,7 +137,10 @@ a{
   padding: 1em;
 }
 .link-button_item{
-  padding: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  /* padding-top: 0.5em; */
+  /* padding-bottom: 0.5em;; */
   margin: 0;
 }
 
