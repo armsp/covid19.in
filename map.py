@@ -41,9 +41,9 @@ for lon, lat, territory, cases, recovered, deaths in zip(list(df['Lon']), list(d
             <td style="padding: 6px 13px;
             border: 1px solid #dfe2e5;">{cases}</td>
             <td style="padding: 6px 13px;
-            border: 1px solid #dfe2e5;">{recovered}</td>
-            <td style="padding: 6px 13px;
             border: 1px solid #dfe2e5;">{deaths}</td>
+            <td style="padding: 6px 13px;
+            border: 1px solid #dfe2e5;">{recovered}</td>
         </tr>
     </tbody>
 </table>
