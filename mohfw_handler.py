@@ -32,6 +32,7 @@ def mohfw_data_to_df():
 def extract_clean_df(df):
     #clean_df = df.head(-1)
     clean_df = df[pd.to_numeric(df['S. No.'], errors='coerce').notna()]
+    clean_df.iloc[:,1] = clean_df.iloc[:,1].str.rstrip('#*')
     return clean_df
 
 
