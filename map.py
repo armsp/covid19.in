@@ -48,7 +48,7 @@ for lon, lat, territory, cases, recovered, deaths in zip(list(df['Lon']), list(d
     </tbody>
 </table>
 """
-    folium.Circle(radius = (int(cases))*100,location=[lat, lon],color='crimson',fill=True,popup=folium.Popup(popup_html),**kwargs).add_to(m)
+    folium.Circle(radius = (int(cases))*50,location=[lat, lon],color='crimson',fill=True,popup=folium.Popup(popup_html),**kwargs).add_to(m)
 
 plugins.ScrollZoomToggler().add_to(m)
     #folium.CircleMarker(
