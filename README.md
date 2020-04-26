@@ -8,6 +8,8 @@ A one stop solution to all your research on COVID-19.
 
 Check the [website](https://armsp.github.io/covid19.in/) daily (work in progress, contributions welcome) for updates or **download the updating [dataset](https://github.com/armsp/covid19.in/tree/master/datasets)** for your analyses.
 
+## Website Screenshot
+![Website Screenshot](screenshot.png)
 ## NEW
 Statewise analysis using Altair coming soon, stay tuned...
 
