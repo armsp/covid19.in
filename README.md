@@ -10,8 +10,13 @@ Check the [website](https://armsp.github.io/covid19.in/) daily (work in progress
 
 ## Website Screenshot
 ![Website Screenshot](screenshot.png)
-## NEW
-Statewise analysis using Altair coming soon, stay tuned...
+
+## [State Visualization](/covid19.in/visualizations) Screenshots
+**Facet of cases per state**
+![Cases](statewise-cases-screenshot.png)
+
+**Barplot**
+![Barplot](bar-plot-screenshot.png)
 
 ## Contribution
 Contributions as PRs are most welcome, but not all can be accepted.
