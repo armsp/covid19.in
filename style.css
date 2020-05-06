@@ -104,6 +104,10 @@ a{
   overflow:hidden;
   width :100%;
 }
+.country canvas.marks {
+  max-width: 100%!important;
+  height: auto!important;
+}
 @media (min-width: 650px){
 .container {
 	/* border: 1px solid red; */
@@ -206,6 +210,10 @@ a{
     /* border-radius:6px */
     /* margin: auto; */
     /* position: relative; */
+}
+canvas.marks {
+  max-width: 100%!important;
+  height: auto!important;
 }
 .country iframe{
   flex-grow: 1; border: none; margin: 0; padding: 0;z-index: 9999;
