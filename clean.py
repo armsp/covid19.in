@@ -26,7 +26,7 @@ def add_clean_state_data(state_dataset_path):
         df['day'] = pd.to_datetime(f.split('/')[-1].split('.')[0])
         print(df.columns)
         print(os.getcwd())
-        df.to_csv(state_dataset_path+f"./clean_daily_statewise_distribution/{f.split('/')[-1]}", index=False)
+        df.to_csv(state_dataset_path+f"/clean_daily_statewise_distribution/{f.split('/')[-1]}", index=False)
         df_list.append(df)
 
 #add_clean_state_data()
