@@ -1,6 +1,6 @@
 import glob
 import pandas as pd
-
+import os
 def add_clean_state_data(state_dataset_path):
     files = glob.glob(state_dataset_path+'/statewise_distribution/2020-*.csv')#../statewise_distribution/2020-*.csv'
     #latest_file = max(list_of_files, key=lambda x: x.split('/')[-1].split('.')[0].split('-')[1])
@@ -25,7 +25,8 @@ def add_clean_state_data(state_dataset_path):
         #tt['day'] = pd.to_datetime(f.split('.')[0])
         df['day'] = pd.to_datetime(f.split('/')[-1].split('.')[0])
         print(df.columns)
-        df.to_csv(state_dataset_path+f"/statewise_distribution/clean_daily_statewise_distribution/{f.split('/')[-1]}", index=False)
+        print(os.getcwd())
+        df.to_csv(f"./clean_daily_statewise_distribution/{f.split('/')[-1]}", index=False)
         df_list.append(df)
 
 #add_clean_state_data()
