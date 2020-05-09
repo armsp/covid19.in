@@ -17,8 +17,8 @@ def make_chloropleth_json(clean_state_dataset_path):
 
     # Mapping
     base = alt.Chart(india).mark_geoshape(fill='white', stroke='gray', strokeWidth=2).encode().properties(
-            width=400,
-            height=400,
+            width=450,
+            height=450,
         )
 
     choro = alt.Chart(india).mark_geoshape(
