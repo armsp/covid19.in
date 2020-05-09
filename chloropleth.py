@@ -41,7 +41,7 @@ def make_chloropleth_json(clean_state_dataset_path):
     final_map = (base+choro).configure_view(
         strokeWidth=0
     )
-    return final_map
+    return final_map.to_json(indent=None)
 # with open('charts.html', 'w') as f:
 #     f.write(two_charts_template.format(
 #         vega_version=alt.VEGA_VERSION,
