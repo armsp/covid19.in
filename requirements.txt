@@ -6,3 +6,5 @@ lxml
 pyyaml
 jinja2
 folium
+altair==4.1.0
+geopandas
