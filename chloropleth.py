@@ -7,8 +7,9 @@ def make_chloropleth_json(state_dataset_path):
     india = gpd.read_file('india_v2.json')
     files = glob.glob(state_dataset_path+'/statewise_distribution/2020-*.csv')#../statewise_distribution/2020-*.csv'
     sorted_files = sorted(files, key=lambda d: tuple(map(int, d.split('/')[-1].split('.')[0].split('-'))))
+    print(sorted_files)
     latest_file = sorted_files[-1]
-
+    print(latest_file)
     df = pd.read_csv(latest_file)
     df = df.drop(['sno.', 'lon', 'lat', 'day'], 1)
 
