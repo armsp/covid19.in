@@ -14,7 +14,8 @@ def make_chloropleth_json(clean_state_dataset_path):
     print(latest_file)
     df = pd.read_csv(latest_file)
     df = df.drop(['sno.', 'lon', 'lat', 'day'], 1)
-    df['active'] = df['case'] - df['recovery'] - df['death']
+    df.rename(columns={'recovery': 'Recovery', 'death': 'Deaths'}, inplace=True)
+    df['Active Cases'] = df['case'] - df['Recovery'] - df['Deaths']
 
     india = india.join(df.set_index('place'), on='state')
 
@@ -38,7 +39,7 @@ def make_chloropleth_json(clean_state_dataset_path):
                     bin=alt.BinParams(binned=False,maxbins=32,nice=True),
                     #legend=None
                     ),
-            tooltip=[alt.Tooltip('state:N', title='State'),'Active Cases:Q','Deaths:Q', 'Recovery:Q'],
+            tooltip=[alt.Tooltip('state:N', title='State'),'Active Cases:Q', 'Deaths:Q', 'Recovery:Q'],
         )
 
     final_map = (base+choro).configure_view(
