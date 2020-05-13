@@ -111,7 +111,7 @@ jhu_df.to_csv(f'./datasets/timeseries_records/cases_deaths_recoveries_timeseries
 # Make plot
 ax = plt.axes()
 kwargs = {'markeredgewidth': 0.25}
-sns.lineplot(x='index', y='value', hue='category', hue_order=['cases', 'recoveries', 'deaths'], style='category', palette={'cases': 'Orange', 'recoveries': 'Green', 'deaths': 'Red'}, dashes=False, data=plot_df, markers={'deaths': 'X', 'recoveries': 'd', 'cases': 'o'}, ax=ax, **kwargs)
+sns.lineplot(x='index', y='value', hue='category', hue_order=['cases', 'recoveries', 'deaths'], style='category', palette={'cases': 'Red', 'recoveries': 'Green', 'deaths': 'Gray'}, dashes=False, data=plot_df, markers={'deaths': 'X', 'recoveries': 'd', 'cases': 'o'}, ax=ax, **kwargs)
 # Draw horizontal lines at max values
 cases_max = int(plot_df['value'].where(plot_df['category'] == 'cases').max())
 deaths_max = int(plot_df['value'].where(plot_df['category'] == 'deaths').max())
