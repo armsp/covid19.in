@@ -3,16 +3,18 @@ import pandas as pd
 import geopandas as gpd
 import glob
 
+alt.renderers.set_embed_options(actions=False)
+
 def make_chloropleth_json(clean_state_dataset_path):
-    alt.renderers.set_embed_options(actions=False)
     india = gpd.read_file('india_v2.json')
     files = glob.glob(clean_state_dataset_path+'/2020-*.csv')#../statewise_distribution/2020-*.csv'
     sorted_files = sorted(files, key=lambda d: tuple(map(int, d.split('/')[-1].split('.')[0].split('-'))))
-    print(sorted_files)
+    #print(sorted_files)
     latest_file = sorted_files[-1]
     print(latest_file)
     df = pd.read_csv(latest_file)
     df = df.drop(['sno.', 'lon', 'lat', 'day'], 1)
+    df['active'] = df['case'] - df['recovery'] - df['death']
 
     india = india.join(df.set_index('place'), on='state')
 
@@ -28,15 +30,15 @@ def make_chloropleth_json(clean_state_dataset_path):
             strokeWidth=1,
             stroke='gray',
         ).encode(
-            color=alt.Color('case',
+            color=alt.Color('active',
                     type='quantitative',
                     scale=alt.Scale(scheme='orangered',type='sqrt'),#sqrt band
                     #['linear', 'log', 'pow', 'sqrt', 'symlog', 'identity', 'sequential', 'time', 'utc', 'quantile', 'quantize', 'threshold', 'bin-ordinal', 'ordinal', 'point', 'band']
-                    title = "Cases",
+                    title = "Active Cases",
                     bin=alt.BinParams(binned=False,maxbins=32,nice=True),
                     #legend=None
                     ),
-            tooltip=[alt.Tooltip('state:N', title='State'),'case:Q','death:Q', 'recovery:Q'],
+            tooltip=[alt.Tooltip('state:N', title='State'),'Active Cases:Q','Deaths:Q', 'Recovery:Q'],
         )
 
     final_map = (base+choro).configure_view(
