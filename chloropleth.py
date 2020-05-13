@@ -31,7 +31,7 @@ def make_chloropleth_json(clean_state_dataset_path):
             strokeWidth=1,
             stroke='gray',
         ).encode(
-            color=alt.Color('active',
+            color=alt.Color('Active Cases',
                     type='quantitative',
                     scale=alt.Scale(scheme='orangered',type='sqrt'),#sqrt band
                     #['linear', 'log', 'pow', 'sqrt', 'symlog', 'identity', 'sequential', 'time', 'utc', 'quantile', 'quantize', 'threshold', 'bin-ordinal', 'ordinal', 'point', 'band']
