@@ -21,11 +21,11 @@ def make_chloropleth_json(clean_state_dataset_path):
 
     # Mapping
     base = alt.Chart(india).mark_geoshape(fill='white', stroke='gray', strokeWidth=2).encode().properties(
-            width=450,
-            height=450,
+            width='container',
+            height=525,
         )
 
-    choro = alt.Chart(india).mark_geoshape(
+    choro = alt.Chart(india,width='container',height=525,).mark_geoshape(
             #fill='lightgray',
             fillOpacity=0.8,
             strokeWidth=1,
@@ -45,7 +45,8 @@ def make_chloropleth_json(clean_state_dataset_path):
     final_map = (base+choro).configure_view(
         strokeWidth=0
     )
-    return final_map.to_json(indent=None)
+    kwargs = {'actions': False}
+    return final_map.to_json(indent=None, **kwargs)
 # with open('charts.html', 'w') as f:
 #     f.write(two_charts_template.format(
 #         vega_version=alt.VEGA_VERSION,
