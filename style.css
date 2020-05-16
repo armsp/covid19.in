@@ -104,10 +104,10 @@ a{
   overflow:hidden;
   width :100%;
 }
-/* .country canvas.marks {
+.country canvas.marks {
   max-width: 100%!important;
-  height: auto!important;
-} */
+  /* height: auto!important; */
+}
 @media (min-width: 650px){
 .container {
 	/* border: 1px solid red; */
@@ -211,10 +211,10 @@ a{
     /* margin: auto; */
     /* position: relative; */
 }
-/* canvas.marks {
+canvas.marks {
   max-width: 100%!important;
-  height: auto!important;
-} */
+  /* height: auto!important; */
+}
 .country iframe{
   flex-grow: 1; border: none; margin: 0; padding: 0;z-index: 9999;
   height: 525px;
