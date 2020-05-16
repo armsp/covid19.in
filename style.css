@@ -213,8 +213,9 @@ a{
     /* margin: auto; */
     /* position: relative; */
 }
-canvas.marks {
+.country canvas.marks {
   max-width: 100%!important;
+  width: 100%!important;
   height: 525px!important;
 }
 
