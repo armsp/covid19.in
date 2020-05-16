@@ -44,6 +44,9 @@ def make_chloropleth_json(clean_state_dataset_path):
 
     final_map = (base+choro).configure_view(
         strokeWidth=0
+    ).configure_legend(
+        orient='bottom',
+        gradientLength = 500
     )
     # kwargs = {'actions': False}
     return final_map.to_json(indent=None)
