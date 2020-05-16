@@ -108,6 +108,8 @@ a{
   max-width: 100%!important;
   height: 525px!important;
 }
+
+
 @media (min-width: 650px){
 .container {
 	/* border: 1px solid red; */
@@ -195,7 +197,7 @@ a{
   /* border: 2px solid red; */
     display: flex;
     /* flex-grow: 1; border: none; margin: 0; padding: 0;  */
-    /* flex-grow: 1; */
+    flex-grow: 100;
     grid-column: span 3;
     grid-row: 4 / 5;
     /* align-self: flex-start; */
@@ -215,7 +217,7 @@ canvas.marks {
   max-width: 100%!important;
   height: 525px!important;
 }
-.vega-actions {display: none}
+
 .country iframe{
   flex-grow: 1; border: none; margin: 0; padding: 0;z-index: 9999;
   height: 525px;
