@@ -37,17 +37,18 @@ def make_chloropleth_json(clean_state_dataset_path):
                     #['linear', 'log', 'pow', 'sqrt', 'symlog', 'identity', 'sequential', 'time', 'utc', 'quantile', 'quantize', 'threshold', 'bin-ordinal', 'ordinal', 'point', 'band']
                     title = "Active Cases",
                     bin=alt.BinParams(binned=False,maxbins=32,nice=True),
-                    #legend=None
+                    legend=None
                     ),
             tooltip=[alt.Tooltip('state:N', title='State'),'Active Cases:Q', 'Deaths:Q', 'Recovery:Q'],
         )
 
     final_map = (base+choro).configure_view(
         strokeWidth=0
-    ).configure_legend(
-        # orient='bottom',
-        gradientLength = 500
     )
+    # .configure_legend(
+    #     # orient='bottom',
+    #     gradientLength = 500
+    # )
     # kwargs = {'actions': False}
     return final_map.to_json(indent=None)
 # with open('charts.html', 'w') as f:
