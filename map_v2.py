@@ -10,7 +10,7 @@ import geopandas as gpd
 map_kwargs = {"zoomSnap": 0.5}
 m = folium.Map(location = [20.5937, 78.9629], tiles='CartoDB Positron', zoom_start=4.5, **map_kwargs)
 
-list_of_files = glob.glob('./datasets/clean_daily_statewise_distribution/*.csv')
+list_of_files = glob.glob('./datasets/clean_daily_statewise_distribution/2020-*.csv')
 sorted_files = sorted(list_of_files, key=lambda d: tuple(map(int, d.split('/')[-1].split('.')[0].split('-'))))
 data_file = sorted_files[-1]
 df = pd.read_csv(data_file)
