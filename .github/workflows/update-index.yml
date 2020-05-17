@@ -44,9 +44,9 @@ jobs:
                 run: python main_v2.py
                 working-directory: ${{ github.workspace }}/covid19-in
 
-            # -   name: Run map script
-            #     run: python map.py
-            #     working-directory: ${{ github.workspace }}/covid19-in
+            -   name: Run map script
+                run: python map_v2.py
+                working-directory: ${{ github.workspace }}/covid19-in
 
             -   name: Log
                 run: |
