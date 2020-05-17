@@ -203,8 +203,8 @@ state_data_path = os.path.join(os.environ['GITHUB_WORKSPACE'], 'covid19-in', 'da
 print("adding clean datasets")
 add_clean_state_data(state_data_path)
 
-clean_state_data_path = os.path.join(os.environ['GITHUB_WORKSPACE'], 'covid19-in', 'datasets', 'clean_daily_statewise_distribution')
-map_json = make_chloropleth_json(clean_state_data_path)
+#clean_state_data_path = os.path.join(os.environ['GITHUB_WORKSPACE'], 'covid19-in', 'datasets', 'clean_daily_statewise_distribution')
+#map_json = make_chloropleth_json(clean_state_data_path)
 
 # Get ready to pass data to template
 stats_dict = {'w_cases': w_confirmed, 'w_deaths': w_deaths, 'w_recovered': w_recovered, 'i_cases': in_cases_greater, 'i_deaths': in_deaths_greater , 'i_recovered': in_recovered_greater}
@@ -213,8 +213,8 @@ commit_info_dict = {'current_time': datetime.now().strftime("%B %d, %Y at %I:%M 
 
 state_info = {'link': f"https://github.com/armsp/covid19.in/blob/master/datasets/statewise_distribution/{str(date.today())}.csv"}
 
-namespace = {'statistics': stats_dict, 'safety_resources': resources['SAFETY & PREVENTION'], 'about': resources['Virus & the Disease'], 'fakes': resources['Fads, Fake News & Scams'], 'misc': resources['Miscellaneous'], 'commit_info': commit_info_dict, 'state_info': state_info, 'c_map': map_json}
-
+namespace = {'statistics': stats_dict, 'safety_resources': resources['SAFETY & PREVENTION'], 'about': resources['Virus & the Disease'], 'fakes': resources['Fads, Fake News & Scams'], 'misc': resources['Miscellaneous'], 'commit_info': commit_info_dict, 'state_info': state_info}
+#,'c_map': map_json
 rendered_html = template.render(**namespace)
 with open("index.html", "w+") as f:
     f.write(rendered_html)

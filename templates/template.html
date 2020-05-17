@@ -16,10 +16,10 @@
             {% with stats=statistics %}
                 {% include 'stats.html' %}
             {% endwith %}
-            <!-- {% include 'map.html' %} -->
-            {% with spec=c_map %}
+            {% include 'map.html' %}
+            <!-- {% with spec=c_map %}
                 {% include 'chloropleth.html' %}
-            {% endwith %}
+            {% endwith %} -->
             {% with safety=safety_resources %}
                 {% include 'safety.html' %}
             {% endwith %}
