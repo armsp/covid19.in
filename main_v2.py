@@ -158,7 +158,7 @@ last_x_tick = date2num(plot_df['index'].values[-1])
 if xt[-1] > last_x_tick:
     xt.pop(-1)
 else:
-    if abs(xt[-1] - last_x_tick) < (xt[1] - xt[0])/3:
+    if abs(xt[-1] - last_x_tick) < (xt[1] - xt[0])/2:
         xt.pop(-1)
 #xt = np.append(xt, last_x_tick)
 xt.append(last_x_tick)

@@ -35,7 +35,12 @@ def extract_clean_df(df):
     clean_df.iloc[:,1] = clean_df.iloc[:,1].str.rstrip('#*')
     #clean_df.iloc[:,2] = clean_df.iloc[:,2].astype(str).str.rstrip('#*')
     #clean_df.iloc[:,3] = clean_df.iloc[:,3].str.rstrip('#*')
-    clean_df.iloc[:,4] = clean_df.iloc[:,4].astype(str).str.rstrip('#*')
+    #clean_df.iloc[:,4] = clean_df.iloc[:,4].astype(str).str.rstrip('#*')
+    # MOHFW table format changed - added active cases
+    clean_df.drop(clean_df.columns[2], axis=1, inplace=True)
+    c = clean_df.columns.to_list()
+    reorder = c[:2]+[c[-1]]+c[2:4]
+    clean_df = clean_df[reorder]
     return clean_df
 
 
