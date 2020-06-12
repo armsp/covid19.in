@@ -49,9 +49,9 @@ def get_jhu_stats(covid_daily_reports_path):
     print(latest_file)
     ## Getting stats data
     stats = pd.read_csv(latest_file)
-    in_confirmed = int(stats.loc[stats['Country_Region'] == "India"]['Confirmed'])
-    in_deaths = int(stats.loc[stats['Country_Region'] == "India"]['Deaths'])
-    in_recovered = int(stats.loc[stats['Country_Region'] == "India"]['Recovered'])
+    in_confirmed = stats[stats['Country_Region'] == "India"]['Confirmed'].sum()
+    in_deaths = stats[stats['Country_Region'] == "India"]['Deaths'].sum()
+    in_recovered = stats[stats['Country_Region'] == "India"]['Recovered'].sum()
     #sum of time series data seems > daily report data. Change it after confirmation
     w_confirmed = stats['Confirmed'].sum()
     w_recovered = stats['Recovered'].sum()

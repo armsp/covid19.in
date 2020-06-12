@@ -5,7 +5,7 @@ def add_clean_state_data(state_dataset_path):
     files = glob.glob(state_dataset_path+'/statewise_distribution/2020-*.csv')#../statewise_distribution/2020-*.csv'
     #latest_file = max(list_of_files, key=lambda x: x.split('/')[-1].split('.')[0].split('-')[1])
     sorted_files = sorted(files, key=lambda d: tuple(map(int, d.split('/')[-1].split('.')[0].split('-'))))
-    latest_file = sorted_files[-7:]
+    latest_file = sorted_files[-2:]
     #sorted_files = ['2020-04-09.csv', '2020-04-10.csv']
     #state_set = set()
     df_list = []
