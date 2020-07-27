@@ -71,8 +71,8 @@ def extract_clean_df(df):
 
 def geocode(place):
     data = pd.read_csv('india_states_lon_lat.csv')
-    lon = data[data['place'] == place]['lon']
-    lat = data[data['place'] == place]['lat']
+    lon = float(data[data['place'] == place]['lon'])
+    lat = float(data[data['place'] == place]['lat'])
     return (lon, lat)
 
 
