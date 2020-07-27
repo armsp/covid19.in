@@ -44,38 +44,43 @@ def extract_clean_df(df):
     return clean_df
 
 
-def geocode(city):
-    url = 'https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates'
-    header = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36'}
+# def geocode(city):
+#     url = 'https://geocode.arcgis.com/arcgis/rest/services/World/GeocodeServer/findAddressCandidates'
+#     header = {
+#         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36'}
 
-    param_dict = {"f": "json", "singleLine": f"{city}, IND", "maxLocations": 2}
-    params = parse.urlencode(param_dict).encode('UTF-8')
-    req = request.Request(url, headers=header, data=params)
+#     param_dict = {"f": "json", "singleLine": f"{city}, IND", "maxLocations": 2}
+#     params = parse.urlencode(param_dict).encode('UTF-8')
+#     req = request.Request(url, headers=header, data=params)
 
-    try:
-        response = request.urlopen(req)
-    except Exception:
-        log.error("Geocode request Failed", exc_info=True)
-    else:
-        # some other code? handle it here
-        log.debug(f"Response code = {response.getcode()}")
-        log.info("Adding Latitude and Longitude")
+#     try:
+#         response = request.urlopen(req)
+#     except Exception:
+#         log.error("Geocode request Failed", exc_info=True)
+#     else:
+#         # some other code? handle it here
+#         log.debug(f"Response code = {response.getcode()}")
+#         log.info("Adding Latitude and Longitude")
 
-    if response.getcode() == 200:
-        response_dict = json.load(response)
-        if city == 'Andhra Pradesh':
-            return (response_dict['candidates'][1]["location"]["x"], response_dict['candidates'][1]["location"]["y"])
-        else:
-            return (response_dict['candidates'][0]["location"]["x"], response_dict['candidates'][0]["location"]["y"])
+#     if response.getcode() == 200:
+#         response_dict = json.load(response)
+#         if city == 'Andhra Pradesh':
+#             return (response_dict['candidates'][1]["location"]["x"], response_dict['candidates'][1]["location"]["y"])
+#         else:
+#             return (response_dict['candidates'][0]["location"]["x"], response_dict['candidates'][0]["location"]["y"])
+
+def geocode(place):
+    data = pd.read_csv('india_states_lon_lat.csv')
+    lon = data[data['place'] == place]['lon']
+    lat = data[data['place'] == place]['lat']
+    return (lon, lat)
 
 
 def add_lat_lon(df):
     temp_df = pd.DataFrame()
     temp_df = df
     try:
-        temp_df['Lon'], temp_df['Lat'] = zip(
-            *(df['Name of State / UT'].map(geocode)))
+        temp_df['Lon'], temp_df['Lat'] = zip(*(df['Name of State / UT'].map(geocode)))
     except Exception:
         log.error("adding lat & lon failed", exc_info=True)
     else:
