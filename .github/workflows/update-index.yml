@@ -4,8 +4,8 @@ on:
     push:
         branches:
             -   master
-    schedule:
-        -   cron: '0 1,4,8,15 * * *' #four times daily
+#     schedule:
+#         -   cron: '0 1,4,8,15 * * *' #four times daily
 
 jobs:
     my-job:
